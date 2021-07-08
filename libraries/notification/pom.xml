@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.mirai.libraries</groupId>
+		<artifactId>mirai-library-starter</artifactId>
+		<version>1.0.0</version>
+		<relativePath/>
+	</parent>
+	<artifactId>notification</artifactId>
+	<version>0.0.0</version>
+	<name>notification</name>
+	<description>Notification Library</description>
+
+	<properties>
+		<mockserver-netty.version>5.11.2</mockserver-netty.version>
+		<mirai-libraries-audit.version>1.0.0</mirai-libraries-audit.version>
+		<hibernate-types-52.version>2.3.4</hibernate-types-52.version>
+	</properties>
+
+	<dependencies>
+		<!-- Mirai Library Set -->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+<!--		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>security</artifactId>
+			<version>1.0.0</version>
+		</dependency>-->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- Custom Jackson configuration -->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>jackson</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- Enforce Web-Security on HTTP Endpoints -->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>web-security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>audit</artifactId>
+			<version>${mirai-libraries-audit.version}</version>
+		</dependency>
+
+		<!-- Support for Web Service development -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Support for Spring Boot Admin and Kubernetes Health & Liveliness checks -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- Used for custom Spring Annotations -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<!-- JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- The Hibernate Types support for JSON column mapping-->
+		<dependency>
+			<groupId>com.vladmihalcea</groupId>
+			<artifactId>hibernate-types-52</artifactId>
+			<version>${hibernate-types-52.version}</version>
+		</dependency>
+
+		<!-- Liquibase -->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-jaxb-annotations</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.retry</groupId>
+			<artifactId>spring-retry</artifactId>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>1.14.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>1.14.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Mail Functionality-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- Parsing Json -->
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+		</dependency>
+
+		<!-- Liquibase -->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-jaxb-annotations</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

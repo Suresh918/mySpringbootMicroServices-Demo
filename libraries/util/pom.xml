@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.mirai.libraries</groupId>
+		<artifactId>mirai-library-starter</artifactId>
+		<version>1.0.0</version>
+		<relativePath/>
+	</parent>
+	<artifactId>util</artifactId>
+	<version>1.0.0</version>
+	<name>util</name>
+	<description>Utility classes and methods</description>
+
+	<properties>
+		<guava.version>30.1-jre</guava.version>
+	</properties>
+
+	<dependencies>
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<!-- Used in DaoUtility -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Used for case conversion -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+	</dependencies>
+</project>

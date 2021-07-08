@@ -1,0 +1,14 @@
+package com.example.mirai.libraries.notification.error.model;
+
+import com.example.mirai.libraries.core.model.Event;
+import lombok.Data;
+
+@Data
+public class EventToEmailConversionFailure extends IrrecoverableNotificationException implements UserAwareException {
+    private String userId;
+
+    public EventToEmailConversionFailure(Exception exception, String description, String userId, Event event) {
+        super(exception, description, event);
+        this.userId = userId;
+    }
+}

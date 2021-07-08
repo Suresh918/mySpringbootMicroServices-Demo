@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.mirai.libraries</groupId>
+		<artifactId>mirai-library-starter</artifactId>
+		<version>1.0.0</version>
+		<relativePath/>
+	</parent>
+	<artifactId>audit</artifactId>
+	<version>1.0.0</version>
+	<name>audit</name>
+	<description>Audit using hibernate envers</description>
+
+	<dependencies>
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>core</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>com.example.mirai.libraries</groupId>
+			<artifactId>util</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Used for auditing -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+		</dependency>
+
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+</project>

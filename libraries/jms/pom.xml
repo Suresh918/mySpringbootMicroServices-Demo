@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.mirai.libraries</groupId>
+		<artifactId>mirai-library-starter</artifactId>
+		<version>1.0.0</version>
+		<relativePath/>
+	</parent>
+	<artifactId>jms</artifactId>
+	<version>1.0.0</version>
+	<name>jms</name>
+	<description>Library project for JMS messaging</description>
+
+	<properties>
+		<tibjms.version>8.5.1</tibjms.version>
+	</properties>
+
+	<dependencies>
+		<!-- TODO: provide description in context of usage -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<!-- Used for messaging -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>javax.jms-api</artifactId>
+		</dependency>
+		<!--<dependency>
+			<groupId>com.tibco.tibjms</groupId>
+			<artifactId>tibjms</artifactId>
+			<version>${tibjms.version}</version>
+		</dependency>-->
+
+		<!-- Enables support Validation API (@Min, @Max, etc.)-->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+	</dependencies>
+</project>
