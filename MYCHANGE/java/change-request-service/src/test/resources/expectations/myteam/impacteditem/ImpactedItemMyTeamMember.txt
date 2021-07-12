@@ -1,0 +1,20 @@
+{
+   "id":<my_team_id>,
+   "members":[
+      {
+         "member":{
+            "id":<member_id>,
+            "user":{
+               "user_id":"<DATA_IDENTIFIER>_my_team_member_user_id",
+               "full_name":"<DATA_IDENTIFIER>_my_team_member_full_name",
+               "email":"<DATA_IDENTIFIER>_my_team_member_email",
+               "department_name":"<DATA_IDENTIFIER>_my_team_member_department_name",
+               "abbreviation":"<DATA_IDENTIFIER>_my_team_member-abbreviation"
+            },
+            "roles":[
+               "changeSpecialist2"
+            ]
+         }
+      }
+   ]
+}

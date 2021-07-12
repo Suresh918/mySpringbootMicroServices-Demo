@@ -1,0 +1,7 @@
+docker run -p 5433:5432 --name postgres-change-request -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=change-request -d postgres
+
+
+#after connecting to schema execute the following command:
+CREATE extension tablefunc;
+
+#master-password: password

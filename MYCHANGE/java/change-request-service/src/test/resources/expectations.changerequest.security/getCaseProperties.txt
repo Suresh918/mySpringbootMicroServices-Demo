@@ -1,0 +1,1 @@
+{"unreadable_property_regexps":[],"readable_property_regexps":[],"unupdatable_property_regexps":[],"updatable_property_regexps":[]}

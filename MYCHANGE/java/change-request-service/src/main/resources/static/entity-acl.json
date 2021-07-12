@@ -1,0 +1,1306 @@
+{
+  "com.example.mirai.projectname.changerequestservice.changerequest.model.ChangeRequest": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE",
+          "CREATE_AGGREGATE",
+          "CREATE_MY_TEAM"
+        ]
+      },
+      {
+        "filter": "isNotSecure() and isDrafted() and getCreator().getUserId().equals(\"${loggedInUser}\")",
+        "case_actions": [
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isNotSecure() and isNotObsoleted()",
+        "case_actions": [
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isNotSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": "is_secure:false or member_data:*,fshaik~* or boards%${loggedInUserGroups}",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "CREATE",
+          "CREATE_AGGREGATE",
+          "CREATE_MY_TEAM"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "SUBMIT",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and isChangeNoticeNotCreated()",
+        "case_actions": [
+          "UPDATE_CHANGE_OWNER_TYPE"
+          ]
+      },
+      {
+        "filter": "isSubmitted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REJECT",
+          "REDRAFT"
+        ]
+      },
+      {
+        "filter": "isSolutionDefined()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "CREATE_SCIA",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REJECT",
+          "REDRAFT",
+          "RESUBMIT",
+          "ANALYZE_IMPACT"
+        ]
+      },
+      {
+        "filter": "isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "CREATE_SCIA",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REJECT",
+          "REDRAFT",
+          "RESUBMIT",
+          "APPROVE"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REDRAFT",
+          "RESUBMIT",
+          "REANALYZE_IMPACT"
+        ]
+      },
+      {
+        "filter": "isApproved() and isChangeNoticeImplemented()",
+        "case_actions": [
+          "CLOSE"
+        ]
+      },
+      {
+        "filter": "isClosed()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "COMMUNICATE_CHANGE_REQUEST"
+        ]
+      },
+      {
+        "filter": "isRejected()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {"filter":  "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "CREATE_AGENDA_ITEM_OFFLINE_DECISION"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE",
+          "CREATE_AGGREGATE",
+          "CREATE_MY_TEAM",
+          "READ"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "isSubmitted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REDRAFT",
+          "DEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isSolutionDefined()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REDRAFT"
+        ]
+      },
+      {
+        "filter": "isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REDRAFT",
+          "REDEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_AGENDA_ITEM",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "UPDATE_CHANGE_REQUEST_CB_RULESET",
+          "REDRAFT",
+          "REDEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isApproved() and isChangeNoticeNotCreated()",
+        "case_actions": [
+          "CREATE_CHANGE_NOTICE"
+        ]
+      },
+      {
+        "filter": "isClosed()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "COMMUNICATE_CHANGE_REQUEST"
+        ]
+      },
+      {
+        "filter": "isRejected()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {"filter":  "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "CREATE_AGENDA_ITEM_OFFLINE_DECISION"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE",
+          "CREATE_AGGREGATE",
+          "CREATE_MY_TEAM",
+          "READ"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_DOCUMENT",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isSubmitted()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "REDRAFT",
+          "DEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isSolutionDefined()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "REDRAFT"
+        ]
+      },
+      {
+        "filter": "isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "REDRAFT",
+          "REDEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR",
+          "REDRAFT",
+          "REDEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isApproved() and isChangeNoticeNotCreated()",
+        "case_actions": [
+          "CREATE_CHANGE_NOTICE"
+        ]
+      },
+      {
+        "filter": "isClosed()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isRejected()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.creator": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isDrafted()",
+        "case_actions": [
+          "OBSOLETE"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-1": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-2": [
+      {
+        "filter": "isDrafted() or isSubmitted() or isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "CREATE_ACTION",
+          "CREATE_COMMENT",
+          "CREATE_DOCUMENT",
+          "LINK_CR",
+          "UNLINK_CR"
+        ]
+      },
+      {
+        "filter": "isApproved()",
+        "case_actions": [
+          "READ",
+          "CREATE_ACTION",
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isClosed() or isRejected() or isObsoleted()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-owner": [
+      {
+        "filter": "!isClosed() and isNotObsoleted() and isCreatorTypeChangeRequest()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isSubmitted() and isCreatorTypeChangeRequest()",
+        "case_actions": [
+          "DEFINE_SOLUTION"
+        ]
+      },
+      {
+        "filter": "isSolutionDefined() and isCreatorTypeChangeRequest()",
+        "case_actions": [
+          "ANALYZE_IMPACT"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "MyTeamMember.development&EngineeringProjectLead": [
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "MyTeamMember.coordinatorSCMPLM": [
+      {
+        "filter": "isSolutionDefined() or isImpactAnalyzed()",
+        "case_actions": [
+          "CREATE_SCIA"
+        ]
+      },
+      {
+        "fetch_view_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.changerequestservice.document.model.ChangeRequestDocument": {
+    "user": [
+      {
+        "filter": "isChangeRequestNotSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ChangeRequestDocument.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.changerequestservice.comment.model.ChangeRequestComment": {
+    "user": [
+      {
+        "filter": "!isChangeRequestSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isChangeRequestSecure() and isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "((changeRequest.isSecure:false) and ((creator.user_id:${loggedInUser} and status:1) or (status@2,3))) or creator.user_id:${loggedInUser}",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequest.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ChangeRequestComment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isChangeRequestNotObsoleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!hasReplies() and isPublished() and isChangeRequestNotObsoleted()",
+        "case_actions": [
+          "REMOVE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and !hasReplies() and isChangeRequestNotObsoleted()",
+        "case_actions": [
+          "DELETE"
+        ]
+      },
+      {
+        "filter": "isPublished() and isChangeRequestNotObsoleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and isChangeRequestNotObsoleted()",
+        "case_actions": [
+          "PUBLISH",
+          "UPDATE"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.changerequestservice.document.model.ChangeRequestCommentDocument": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequest.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequestCommentDocument.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.changerequestservice.myteam.model.ChangeRequestMyTeam": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!(isClosed() or isRejected() or isObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+      ],
+    "ChangeRequest.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!(isClosed() or isRejected() or isObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      }
+    ],
+    "MyTeamMember.development&EngineeringProjectLead": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!(isClosed() or isRejected() or isObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": "isChangeRequestNotSecure() and !( isClosed() or isRejected() or isObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": "isChangeRequestNotSecure() and !( isClosed() or isRejected() or isObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ]
+  }
+}

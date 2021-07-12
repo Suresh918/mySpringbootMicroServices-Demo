@@ -1,0 +1,27 @@
+package com.example.mirai.projectname.changerequestservice.changerequest.model;
+
+public enum ChangeRequestCaseActions {
+    CREATE,
+    CREATE_AGGREGATE,
+    SUBMIT,
+    DEFINE_SOLUTION,
+    ANALYZE_IMPACT,
+    APPROVE,
+    CLOSE,
+    REJECT,
+    OBSOLETE,
+    UPDATE,
+    LINK_CR,
+    UNLINK_CR,
+    CREATE_CHANGE_NOTICE,
+    CREATE_ACTION,
+    CREATE_AGENDA_ITEM,
+    UPDATE_CHANGE_REQUEST_CB_RULESET,
+    COMMUNICATE_CHANGE_REQUEST,
+    REDRAFT,
+    RESUBMIT,
+    REDEFINE_SOLUTION,
+    REANALYZE_IMPACT,
+    CREATE_AGENDA_ITEM_OFFLINE_DECISION,
+    CREATE_SCIA
+}

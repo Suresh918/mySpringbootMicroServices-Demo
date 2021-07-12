@@ -1,0 +1,18 @@
+[
+   {
+      "number":"<number>",
+      "short_description":"ShortDescription",
+      "description":"Description",
+      "solution_description":"SolutionDescription",
+      "owner":null,
+      "initiator":null,
+      "solver":null,
+      "machine_type":null,
+      "priority":null,
+      "issue_type":null,
+      "root_cause":null,
+      "productID":null,
+      "projectID":null,
+      "functionalClusterID":null
+   }
+]

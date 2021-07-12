@@ -1,0 +1,30 @@
+{
+   "total_elements":1,
+   "total_pages":1,
+   "has_next":null,
+   "results":[
+      {
+         "id":<ID>,
+         "title":"<DATA_IDENTIFIER>_change_request-title",
+         "status":1,
+         "status_label":"Draft",
+         "analysis_priority":null,
+         "completed_actions":0,
+         "open_actions":0,
+         "total_actions":0,
+         "change_specialist1":{
+            "user_id":"<DATA_IDENTIFIER>_change_request-change_specialist1_full_name",
+            "full_name":"<DATA_IDENTIFIER>_change_request-change_specialist1_email",
+            "email":"<DATA_IDENTIFIER>_change_request-change_specialist1_department_name",
+            "department_name":"<DATA_IDENTIFIER>_change_request-change_specialist1_user_id",
+            "abbreviation":"<DATA_IDENTIFIER>_change_request-change_specialist1_abbreviation"
+         },
+         "change_boards":",<DATA_IDENTIFIER>_change_request-change-boards,",
+         "change_control_boards":",<DATA_IDENTIFIER>_change_request-change_controle_boards,",
+         "change_board_rule_set":{
+            "rule_set_name":null,
+            "rules":null
+         }
+      }
+   ]
+}

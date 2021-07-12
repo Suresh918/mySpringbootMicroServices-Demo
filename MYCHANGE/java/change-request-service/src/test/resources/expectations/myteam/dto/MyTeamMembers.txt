@@ -1,0 +1,1 @@
+[{"id":<ID>,"user":{"user_id":"<my_team_member_user_id>","full_name":"<my_team_member_full_name>","email":"<my_team_member_email>","department_name":"<my_team_member_department_name>","abbreviation":"<my_team_member_abbreviation>"},"roles":[]}]

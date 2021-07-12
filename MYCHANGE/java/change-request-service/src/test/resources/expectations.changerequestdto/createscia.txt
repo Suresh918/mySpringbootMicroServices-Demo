@@ -1,0 +1,22 @@
+{
+    "id": null,
+    "revision": null,
+    "title": "<DATA_IDENTIFIER>_change_request-title",
+    "status": null,
+    "plm_coordinator": {
+        "user_id": "user",
+        "full_name": "test user",
+        "email": "test.user@example.com",
+        "department_name": "IT BAS CC Corporate BPI & Automation",
+        "abbreviation": "SaIn"
+    },
+    "contexts": [{
+            "type": "CHANGEREQUEST",
+            "context_id": "<contextid>",
+            "name": "<DATA_IDENTIFIER>_change_request-title",
+            "status": "3"
+        }
+    ],
+    "status_label": "statusLabel",
+    "created_on": null
+}

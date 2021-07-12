@@ -1,0 +1,3 @@
+user-to-execute-create,commentdocument-status,commentdocument-caseaction,expected-result,input
+ChangeRequestComment.creator,PUBLISHED,CREATE_DOCUMENT,AUTHORIZED,tags
+ChangeRequestComment.creator,DRAFTED,CREATE_DOCUMENT,AUTHORIZED,tags

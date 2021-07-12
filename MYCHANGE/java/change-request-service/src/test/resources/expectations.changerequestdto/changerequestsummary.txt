@@ -1,0 +1,17 @@
+{
+   "total_elements":1,
+   "total_pages":1,
+   "has_next":null,
+   "results":[
+      {
+         "id":<ID>,
+         "title":"<DATA_IDENTIFIER>_change_request-title",
+         "status":1,
+         "implementation_priority":null,
+         "customer_impact":"<DATA_IDENTIFIER>_change_request-customer_impact_result",
+         "preinstall_impact":"<DATA_IDENTIFIER>_change_request-preinstall_impact_result",
+         "change_notice_id":null,
+         "change_request_number":"<ID>"
+      }
+   ]
+}

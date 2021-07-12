@@ -1,0 +1,26 @@
+[
+   {
+      "user": "LABEL_change_request-change_specialist1_full_name",
+      "roles": [
+         "ChangeRequest.change-specialist-1"
+      ]
+   },
+   {
+      "user": "LABEL_change_request-creator_user_id",
+      "roles": [
+         "ChangeRequest.creator"
+      ]
+   },
+   {
+      "user": "LABEL_change_request-change_specialist2_full_name",
+      "roles": [
+         "ChangeRequest.change-specialist-2"
+      ]
+   },
+   {
+      "user": "LABEL_cug-projectname-change-specialist-2_user_id",
+      "roles": [
+         "change-specialist-2"
+      ]
+   }
+]

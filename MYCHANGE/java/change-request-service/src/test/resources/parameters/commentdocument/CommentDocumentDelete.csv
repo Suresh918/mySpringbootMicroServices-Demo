@@ -1,0 +1,5 @@
+user-to-execute-delete,comment-status,input,commentdocument-caseaction,expected-result,document-status
+ChangeRequestComment.creator,DRAFTED,tags,DELETE,AUTHORIZED,PUBLISHED
+ChangeRequestComment.creator,PUBLISHED,tags,DELETE,AUTHORIZED,PUBLISHED
+ChangeRequestCommentDocument.creator,DRAFTED,tags,DELETE,AUTHORIZED,PUBLISHED
+ChangeRequestCommentDocument.creator,PUBLISHED,tags,DELETE,AUTHORIZED,PUBLISHED

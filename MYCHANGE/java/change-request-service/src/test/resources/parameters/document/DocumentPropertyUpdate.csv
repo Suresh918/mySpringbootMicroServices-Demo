@@ -1,0 +1,21 @@
+user-to-update-property,property-to-update,changerequestdocument-status-in-which-to-update-property,expected-result,change request-status
+change-specialist-2,description,PUBLISHED,AUTHORIZED,DRAFTED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,DRAFTED
+ChangeRequest.change-control-board-member,description,PUBLISHED,AUTHORIZED,DRAFTED
+ChangeRequest.change-board-member,description,PUBLISHED,AUTHORIZED,DRAFTED
+change-specialist-2,description,PUBLISHED,AUTHORIZED,NEW
+change-specialist-3,description,PUBLISHED,AUTHORIZED,NEW
+ChangeRequest.change-control-board-member,description,PUBLISHED,AUTHORIZED,NEW
+ChangeRequest.change-board-member,description,PUBLISHED,AUTHORIZED,NEW
+change-specialist-2,description,PUBLISHED,AUTHORIZED,SOLUTION_DEFINED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,SOLUTION_DEFINED
+ChangeRequest.change-control-board-member,description,PUBLISHED,AUTHORIZED,SOLUTION_DEFINED
+ChangeRequest.change-board-member,description,PUBLISHED,AUTHORIZED,SOLUTION_DEFINED
+change-specialist-2,description,PUBLISHED,AUTHORIZED,IMPACT_ANALYZED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,IMPACT_ANALYZED
+ChangeRequest.change-control-board-member,description,PUBLISHED,AUTHORIZED,IMPACT_ANALYZED
+ChangeRequest.change-board-member,description,PUBLISHED,AUTHORIZED,IMPACT_ANALYZED
+change-specialist-2,description,PUBLISHED,AUTHORIZED,APPROVED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,APPROVED
+ChangeRequest.change-control-board-member,description,PUBLISHED,AUTHORIZED,APPROVED
+ChangeRequest.change-board-member,description,PUBLISHED,AUTHORIZED,APPROVED

@@ -1,0 +1,152 @@
+{
+   "state_counts":[
+      {
+         "name":"CREATE",
+         "label":"Create",
+         "value":1,
+         "series":[
+            {
+               "name":1,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"1 - Critical"
+            },
+            {
+               "name":2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"2 - High"
+            },
+            {
+               "name":3,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"3 - Medium"
+            },
+            {
+               "name":4,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"4 - Low"
+            },
+            {
+               "name":-2,
+               "value":1,
+               "type":"analysisPriority",
+               "label":""
+            }
+         ]
+      },
+      {
+         "name":"DEFINE_SOLUTION",
+         "label":"Define Solution",
+         "value":0,
+         "series":[
+            {
+               "name":1,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"1 - Critical"
+            },
+            {
+               "name":2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"2 - High"
+            },
+            {
+               "name":3,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"3 - Medium"
+            },
+            {
+               "name":4,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"4 - Low"
+            },
+            {
+               "name":-2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":""
+            }
+         ]
+      },
+      {
+         "name":"ANALYZE_IMPACT",
+         "label":"Analyze Impact",
+         "value":0,
+         "series":[
+            {
+               "name":1,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"1 - Critical"
+            },
+            {
+               "name":2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"2 - High"
+            },
+            {
+               "name":3,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"3 - Medium"
+            },
+            {
+               "name":4,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"4 - Low"
+            },
+            {
+               "name":-2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":""
+            }
+         ]
+      },
+      {
+         "name":"DECIDE",
+         "label":"Decide",
+         "value":0,
+         "series":[
+            {
+               "name":1,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"1 - Critical"
+            },
+            {
+               "name":2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"2 - High"
+            },
+            {
+               "name":3,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"3 - Medium"
+            },
+            {
+               "name":4,
+               "value":0,
+               "type":"analysisPriority",
+               "label":"4 - Low"
+            },
+            {
+               "name":-2,
+               "value":0,
+               "type":"analysisPriority",
+               "label":""
+            }
+         ]
+      }
+   ]
+}

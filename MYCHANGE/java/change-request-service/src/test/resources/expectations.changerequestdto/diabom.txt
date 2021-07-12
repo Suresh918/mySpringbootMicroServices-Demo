@@ -1,0 +1,15 @@
+{
+   "id":10,
+   "last_modified_by":null,
+   "last_modified_on":null,
+   "release_package_number":null,
+   "ip_number":null,
+   "ec_number":null,
+   "revisions":null,
+   "latest_revision":null,
+   "creation_date":null,
+   "parts":null,
+   "relations":null,
+   "changeRequestID":<CRID>,
+   "changeNoticeID":null
+}

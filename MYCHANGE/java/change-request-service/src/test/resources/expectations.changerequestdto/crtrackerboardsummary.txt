@@ -1,0 +1,56 @@
+[
+   {
+      "category_id":"2237-0035",
+      "description":"projectdetails",
+      "sub_categories":[
+         {
+            "name":"CREATE",
+            "label":"Create",
+            "count":1,
+            "type":"ChangeRequest",
+            "items":[
+               {
+                  "id":<ID>,
+                  "title":"<DATA_IDENTIFIER>_change_request-title"
+               }
+            ]
+         },
+         {
+            "name":"DEFINE_SOLUTION",
+            "label":"Define Solution",
+            "count":0,
+            "type":"ChangeRequest",
+            "items":[
+
+            ]
+         },
+         {
+            "name":"ANALYZE_IMPACT",
+            "label":"Analyze Impact",
+            "count":0,
+            "type":"ChangeRequest",
+            "items":[
+
+            ]
+         },
+         {
+            "name":"DECIDE",
+            "label":"Decide",
+            "count":0,
+            "type":"ChangeRequest",
+            "items":[
+
+            ]
+         },
+         {
+            "name":"CLOSE",
+            "label":"Close",
+            "count":0,
+            "type":"ChangeRequest",
+            "items":[
+
+            ]
+         }
+      ]
+   }
+]

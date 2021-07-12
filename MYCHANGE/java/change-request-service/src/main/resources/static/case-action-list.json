@@ -1,0 +1,382 @@
+{
+  "com.example.mirai.projectname.changerequestservice.changerequest.model.ChangeRequest": [
+    {
+      "case_action": "CREATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_AGGREGATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_COMMENT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_DOCUMENT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_MY_TEAM",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_ACTION",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_AGENDA_ITEM",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "LINK_CR",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UNLINK_CR",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE_CHANGE_REQUEST_CB_RULESET",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "SUBMIT",
+      "filter": "isProjectTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$"
+      ],
+      "mandatory_properties_spel": null
+    },
+    {
+      "case_action": "SUBMIT",
+      "filter": "isCreatorTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^change_owner$|^changeOwner$"
+      ],
+      "mandatory_properties_spel": null
+    },
+    {
+      "case_action": "DEFINE_SOLUTION",
+      "filter": "isProjectTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^functional_software_dependencies$|^functionalSoftwareDependencies$",
+        "^parts$",
+        "^tooling$",
+        "^packaging$"
+      ],
+      "mandatory_properties_spel": "isFunctionalSoftwareDependenciesAdded() and isScopeAdded()"
+    },
+    {
+      "case_action": "DEFINE_SOLUTION",
+      "filter": "isCreatorTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^parts$",
+        "^tooling$",
+        "^packaging$"
+      ],
+      "mandatory_properties_spel": "isScopeAdded()"
+    },
+    {
+      "case_action": "ANALYZE_IMPACT",
+      "filter": "isProjectTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^functional_software_dependencies$|^functionalSoftwareDependencies$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^preinstall_impact_result$|^preinstallImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$",
+        "^implementation_ranges$|^implementationRanges$",
+        "^parts$",
+        "^tooling$",
+        "^packaging$"
+      ],
+      "mandatory_properties_spel": "isProjectTypeCR() and isFunctionalSoftwareDependenciesAdded() and isCustomerImpactAdded() and isPreinstallImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded() and isImplementationRangesAdded()"
+    },
+    {
+      "case_action": "ANALYZE_IMPACT",
+      "filter": "isCreatorTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$"
+      ],
+      "mandatory_properties_spel": "isCustomerImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded()"
+    },
+    {
+      "case_action": "APPROVE",
+      "filter": "isProjectTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^functional_software_dependencies$|^functionalSoftwareDependencies$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^preinstall_impact_result$|^preinstallImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$",
+        "^implementation_ranges$|^implementationRanges$",
+        "^parts$",
+        "^tooling$",
+        "^packaging$"
+      ],
+      "mandatory_properties_spel": "isFunctionalSoftwareDependenciesAdded() and isCustomerImpactAdded() and isPreinstallImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded() and isImplementationRangesAdded()"
+    },
+    {
+      "case_action": "APPROVE",
+      "filter": "isCreatorTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$",
+        "^implementation_priority$|^implementationPriority$"
+      ],
+      "mandatory_properties_spel": "isCustomerImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded()"
+    },
+    {
+      "case_action": "CLOSE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REJECT",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$"
+      ]
+    },
+    {
+      "case_action": "CREATE_CHANGE_NOTICE",
+      "filter": "isProjectTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^functional_software_dependencies$|^functionalSoftwareDependencies$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^preinstall_impact_result$|^preinstallImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$",
+        "^implementation_ranges$|^implementationRanges$",
+        "^parts$",
+        "^tooling$",
+        "^packaging$"
+      ],
+      "mandatory_properties_spel": "isProjectTypeCR() and isFunctionalSoftwareDependenciesAdded() and isCustomerImpactAdded() and isPreinstallImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded() and isImplementationRangesAdded()"
+    },
+    {
+      "case_action": "CREATE_CHANGE_NOTICE",
+      "filter": "isCreatorTypeCR()",
+      "mandatory_properties_regexps": [
+        "^title$|^title$",
+        "^is_secure$|^isSecure$",
+        "^issue_types$|^issueTypes$",
+        "^problem_description$|^problemDescription$",
+        "^change_specialist1$|^changeSpecialist1$",
+        "^change_specialist2$|^changeSpecialist2$",
+        "^project_id$|^projectId$",
+        "^customer_impact_result$|^customerImpactResult$",
+        "^impact_on_availability$|^impactOnAvailability$",
+        "^impact_on_system_level_performance$|^impactOnSystemLevelPerformance$",
+        "^implementation_priority$|^implementationPriority$"
+      ],
+      "mandatory_properties_spel": "isCustomerImpactAdded() and isImpactOnAvailabilityAdded() and isImpactOnSystemLevelPerformanceAdded()"
+    },
+    {
+      "case_action": "OBSOLETE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REDRAFT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "RESUBMIT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REDEFINE_SOLUTION",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REANALYZE_IMPACT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_AGENDA_ITEM_OFFLINE_DECISION",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "COMMUNICATE_CHANGE_REQUEST",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "READ",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE_CHANGE_OWNER_TYPE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_SCIA",
+      "mandatory_properties_regexps": []
+    }
+  ],
+  "com.example.mirai.projectname.changerequestservice.document.model.ChangeRequestDocument": [
+    {
+      "case_action": "FETCH",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "READ",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "DELETE",
+      "mandatory_properties_regexps": []
+    }
+  ],
+  "com.example.mirai.projectname.changerequestservice.comment.model.ChangeRequestComment": [
+    {
+      "case_action": "FETCH",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "READ",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "PUBLISH",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REMOVE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "DELETE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_COMMENT",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "CREATE_DOCUMENT",
+      "mandatory_properties_regexps": []
+    }
+  ],
+  "com.example.mirai.projectname.changerequestservice.document.model.ChangeRequestCommentDocument": [
+    {
+      "case_action": "FETCH",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "READ",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "UPDATE",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "DELETE",
+      "mandatory_properties_regexps": []
+    }
+  ],
+  "com.example.mirai.projectname.changerequestservice.myteam.model.ChangeRequestMyTeam": [
+    {
+      "case_action": "READ",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "ADD_MY_TEAM_MEMBER",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REMOVE_MY_TEAM_MEMBER",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "ADD_ROLE_TO_MEMBER",
+      "mandatory_properties_regexps": []
+    },
+    {
+      "case_action": "REMOVE_ROLE_FROM_MEMBER",
+      "mandatory_properties_regexps": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+create topic com.example.mirai.projectname.changerequestservice.changerequest
+create jndiname com.example.mirai.projectname.changerequestservice.changerequest topic com.example.mirai.projectname.changerequestservice.changerequest
+addprop topic com.example.mirai.projectname.changerequestservice.changerequest global
+grant topic com.example.mirai.projectname.changerequestservice.changerequest user=EMS-SERVER all
+grant topic com.example.mirai.projectname.changerequestservice.changerequest user=projectname all
+
+create topic com.example.mirai.projectname.usersettingsevent
+addprop topic com.example.mirai.projectname.usersettingsevent global
+
+create queue com.example.mirai.projectname.changerequestservice.usersettings.preferredroles
+create jndiname com.example.mirai.projectname.changerequestservice.usersettings.preferredroles queue com.example.mirai.projectname.changerequestservice.usersettings.preferredroles
+
+grant queue com.example.mirai.projectname.changerequestservice.usersettings.preferredroles user=projectname all
+create bridge source=topic:com.example.mirai.projectname.usersettingsevent target=queue:com.example.mirai.projectname.changerequestservice.usersettings.preferredroles
+
+create queue com.example.mirai.projectname.changerequestservice.bpmevent.action
+create jndiname com.example.mirai.projectname.changerequestservice.bpmevent.action queue com.example.mirai.projectname.changerequestservice.bpmevent.action
+grant queue com.example.mirai.projectname.changerequestservice.bpmevent.action user=projectname all
+create bridge source=topic:com.example.mirai.projectname.bpmevent target=queue:com.example.mirai.projectname.changerequestservice.bpmevent.action selector="JMSCorrelationID LIKE '%com.example.bpm.MC.DataModel.Action%'"
+
+create queue com.example.mirai.projectname.changerequestservice.bpmevent.agendaitem
+create jndiname com.example.mirai.projectname.changerequestservice.bpmevent.agendaitem queue com.example.mirai.projectname.changerequestservice.bpmevent.agendaitem
+grant queue com.example.mirai.projectname.changerequestservice.bpmevent.agendaitem user=projectname all
+create bridge source=topic:com.example.mirai.projectname.bpmevent target=queue:com.example.mirai.projectname.changerequestservice.bpmevent.agendaitem selector="JMSCorrelationID LIKE '%com.example.bpm.MC.DataModel.AgendaItem%'"
+
+create queue com.example.mirai.projectname.changerequestservice.bpmevent.changenotice
+create jndiname com.example.mirai.projectname.changerequestservice.bpmevent.changenotice queue com.example.mirai.projectname.changerequestservice.bpmevent.changenotice
+grant queue com.example.mirai.projectname.changerequestservice.bpmevent.changenotice user=projectname all
+create bridge source=topic:com.example.mirai.projectname.bpmevent target=queue:com.example.mirai.projectname.changerequestservice.bpmevent.changenotice selector="JMSCorrelationID LIKE '%com.example.bpm.MC.DataModel.ChangeNotice%'"
+
+create queue com.example.mirai.projectname.changerequestservice.bwevent.changenotice
+create bridge source=topic:com.example.mirai.projectname.bwevent target=queue:com.example.mirai.projectname.changerequestservice.bwevent.changenotice
+
+create topic com.example.mirai.projectname.changerequestservice.myteam
+create jndiname com.example.mirai.projectname.changerequestservice.myteam topic com.example.mirai.projectname.changerequestservice.myteam
+grant topic com.example.mirai.projectname.changerequestservice.myteam user=EMS-SERVER all
+grant topic com.example.mirai.projectname.changerequestservice.myteam user=projectname all
+
+create topic com.example.mirai.projectname.releasepackageservice.myteam
+create jndiname com.example.mirai.projectname.releasepackageservice.myteam topic com.example.mirai.projectname.releasepackageservice.myteam
+grant topic com.example.mirai.projectname.releasepackageservice.myteam user=EMS-SERVER all
+grant topic com.example.mirai.projectname.releasepackageservice.myteam user=projectname all
+
+create queue com.example.mirai.projectname.changerequestservice.releasepackage
+create bridge source=topic:com.example.mirai.projectname.releasepackageservice.releasepackage target=queue:com.example.mirai.projectname.changerequestservice.releasePackage selector="type in ('SUBMIT_AGGREGATE','CREATE','RECREATE','READY','REREADY','RELEASED','CLOSED','OBSELETE', 'MERGE', 'RECONCILIATION')"
+
+create queue com.example.mirai.projectname.changerequestservice.changeobject
+create bridge source=topic:com.example.mirai.projectname.impacteditemservice.changeobject target=queue:com.example.mirai.projectname.changerequestservice.changeobject selector="type in ('CREATE_AGGREGATE','RECONCILIATION')"

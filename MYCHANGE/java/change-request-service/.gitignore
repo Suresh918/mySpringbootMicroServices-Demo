@@ -1,0 +1,41 @@
+HELP.md
+target/
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### Maven Wrapper ###
+.mvn
+mvnw
+mvnw.cmd
+
+### Helm ###
+**/charts/*.tgz
+chart/**/Chart.lock
+## Local Properties  ###
+src/main/resources/application-local.properties

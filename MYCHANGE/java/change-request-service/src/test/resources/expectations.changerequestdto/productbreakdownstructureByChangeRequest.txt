@@ -1,0 +1,19 @@
+[
+   {
+      "id":"<PBS_ID>",
+      "deliverable":null,
+      "status":null,
+      "change_request_id":<CR_ID>,
+      "type":null,
+      "is_linkable_to_change_request":null,
+      "description":null,
+      "owner":null,
+      "projectID":null,
+      "productID":null,
+      "functionalClusterID":null,
+      "functionalClusterParentID":null,
+      "pgpIP":null,
+      "pgpIPs":null,
+      "changeRequestIDs":null
+   }
+]

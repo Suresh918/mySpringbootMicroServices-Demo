@@ -1,0 +1,45 @@
+{
+   "case_actions": [
+      {
+         "mandatory_properties_regexps": [],
+         "case_action": "ADD_MY_TEAM_MEMBER",
+         "is_allowed": false,
+         "mandatory_properties_spel": null,
+         "filter": null
+      },
+      {
+         "mandatory_properties_regexps": [],
+         "case_action": "REMOVE_MY_TEAM_MEMBER",
+         "is_allowed": false,
+         "mandatory_properties_spel": null,
+         "filter": null
+      },
+      {
+         "mandatory_properties_regexps": [],
+         "case_action": "REMOVE_ROLE_FROM_MEMBER",
+         "is_allowed": false,
+         "mandatory_properties_spel": null,
+         "filter": null
+      },
+      {
+         "mandatory_properties_regexps": [],
+         "case_action": "ADD_ROLE_TO_MEMBER",
+         "is_allowed": false,
+         "mandatory_properties_spel": null,
+         "filter": null
+      },
+      {
+         "mandatory_properties_regexps": [],
+         "case_action": "READ",
+         "is_allowed": false,
+         "mandatory_properties_spel": null,
+         "filter": null
+      }
+   ],
+   "case_properties": {
+      "unreadable_property_regexps": [],
+      "readable_property_regexps": [],
+      "unupdatable_property_regexps": [],
+      "updatable_property_regexps": []
+   }
+}

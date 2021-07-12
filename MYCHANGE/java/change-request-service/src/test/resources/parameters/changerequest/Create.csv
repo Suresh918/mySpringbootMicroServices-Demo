@@ -1,0 +1,5 @@
+user-to-execute-create,property-name-to-omit-from-request,expected-result
+cug-projectname-authorized-user,NONE,AUTHORIZED
+cug-projectname-change-specialist-1,NONE,AUTHORIZED
+cug-projectname-change-specialist-2,NONE,AUTHORIZED
+cug-projectname-change-specialist-3,NONE,AUTHORIZED

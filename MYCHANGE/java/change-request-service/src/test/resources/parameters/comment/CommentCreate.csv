@@ -1,0 +1,10 @@
+user-to-execute-create,comment-status,comment-caseaction,expected-result,input
+ChangeRequest.change-specialist-1,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+ChangeRequest.change-specialist-2,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+ChangeRequestComment.creator,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+cug-projectname-change-specialist-1,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+cug-projectname-change-specialist-2,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+cug-projectname-change-specialist-3,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+ChangeRequest.change-control-board-member,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+ChangeRequest.change-board-member,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
+ChangeRequest.creator,PUBLISHED,CREATE_COMMENT,AUTHORIZED,{"comment_text":"Comment_created"}
