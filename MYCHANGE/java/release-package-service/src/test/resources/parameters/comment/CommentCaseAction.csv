@@ -1,0 +1,3 @@
+user-to-perform-case-action,status-of-release-package-comment,case-action-to-perform,expected-status-of-release-package,input
+Comment.creator,DRAFTED,PUBLISH,PUBLISHED, {"comment_text":"Comment_updated"}
+Comment.creator,PUBLISHED,REMOVE,REMOVED, {}

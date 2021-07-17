@@ -1,0 +1,13 @@
+user, expected-exception-code, status-code
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-001,403
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-002,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-003,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-004,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-005,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-006,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-007,403
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-008,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-009,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-012,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-013,510
+cug-projectname-change-specialist-2,TEAMCENTER-ECN-015,510

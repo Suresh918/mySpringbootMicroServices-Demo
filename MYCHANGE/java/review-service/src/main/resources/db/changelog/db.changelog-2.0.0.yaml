@@ -1,0 +1,199 @@
+databaseChangeLog:
+- changeSet:
+    id: rename-column-document.department_name
+    author: mabdirim
+    changes:
+      - renameColumn:
+          tableName: document
+          oldColumnName: department_name
+          newColumnName: creator_department_name
+- changeSet:
+    id: add-column-document.size
+    author: mabdirim
+    changes:
+      - addColumn:
+          tableName: document
+          columns:
+            name: size
+            type: BIGINT
+- changeSet:
+    id: create-table-solution_item
+    author: mabdirim
+    changes:
+      - createTable:
+          columns:
+            - column:
+                autoIncrement: true
+                constraints:
+                  nullable: false
+                  primaryKey: true
+                  primaryKeyName: solution_item_pkey
+                name: id
+                type: BIGINT
+            - column:
+                name: ecn_id
+                type: VARCHAR(255)
+            - column:
+                name: solution_item_list
+                type: JSONB
+            - column:
+                name: team_center_id
+                type: VARCHAR(255)
+          tableName: solution_item
+- changeSet:
+    id: create-table-solution_item_delta
+    author: mabdirim
+    changes:
+      - createTable:
+          columns:
+            - column:
+                autoIncrement: true
+                constraints:
+                  nullable: false
+                  primaryKey: true
+                  primaryKeyName: solution_item_delta_pkey
+                name: id
+                type: BIGINT
+            - column:
+                name: ecn_id
+                type: VARCHAR(255)
+            - column:
+                name: item_delta_list
+                type: JSONB
+            - column:
+                name: team_center_id
+                type: VARCHAR(255)
+          tableName: solution_item_delta
+- changeSet:
+    id: create-table-tpd
+    author: mabdirim
+    changes:
+      - createTable:
+          columns:
+            - column:
+                autoIncrement: true
+                constraints:
+                  nullable: false
+                  primaryKey: true
+                  primaryKeyName: tpd_pkey
+                name: id
+                type: BIGINT
+            - column:
+                name: ecn_id
+                type: VARCHAR(255)
+            - column:
+                name: team_center_id
+                type: VARCHAR(255)
+            - column:
+                name: tpd_list
+                type: JSONB
+          tableName: tpd
+- changeSet:
+    id: drop-view-review_entry_comment_overview
+    author: mabdirim
+    changes:
+      - dropView:
+          viewName: review_entry_comment_overview
+- changeSet:
+    id: create-view-comment_overview
+    author: mabdirim
+    changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT comment.id, comment.comment_text, comment.status, comment.creator_user_id,
+              comment.creator_full_name,
+              comment.creator_abbreviation,
+              comment.creator_department_name,
+              comment.creator_email,
+              comment.created_on,
+              ( SELECT count(c.id) AS count
+                FROM comment c
+                WHERE c.replyto_id = comment.id AND c.status = 2) AS reply_count,
+              comment.reviewentry_id AS parent_id,
+              comment.replyto_id AS parent_comment_id
+            FROM comment;
+          viewName: comment_overview
+- changeSet:
+    id: drop-view-comment_reply_overview
+    author: mabdirim
+    changes:
+      - dropView:
+          viewName: comment_reply_overview
+- changeSet:
+    id: add-column-solution_item.last_modified_on
+    author: ptummala
+    changes:
+      - addColumn:
+          tableName: solution_item
+          columns:
+            name: last_modified_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+- changeSet:
+    id: add-column-tpd.last_modified_on
+    author: ptummala
+    changes:
+      - addColumn:
+          tableName: tpd
+          columns:
+            name: last_modified_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+- changeSet:
+    id: add-column-solution_item_delta.last_modified_on
+    author: ptummala
+    changes:
+      - addColumn:
+          tableName: solution_item_delta
+          columns:
+            name: last_modified_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+- changeSet:
+    id: create-view-solution_items_overview
+    author: mabdirim
+    changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            select review_entry.id as id, string_agg(a.name,',') as solution_items_name,
+                   string_agg(a.context_id,',')as solution_items_id
+            from review_entry
+            LEFT JOIN review_entry_contexts a ON a.id=review_entry.id
+            group by review_entry.id;
+          viewName: solution_items_overview
+- changeSet:
+    id: drop-view-review_entry_overview
+    author: mabdirim
+    changes:
+      - dropView:
+          viewName: review_entry_overview
+- changeSet:
+    id: create-view-review_entry_overview
+    author: mabdirim
+    runOnChange: true
+    changes:
+      - createView:
+          fullDefinition: false
+          replaceIfExists: true
+          selectQuery: |-
+            SELECT review_entry.id,
+                     review_entry.description,
+                     review_entry.remark,
+                     review_entry.sequence_number,
+                     review_entry.assignee_user_id,
+                     review_entry.assignee_full_name,
+                     review_entry.assignee_abbreviation,
+                     review_entry.assignee_department_name,
+                     review_entry.assignee_email,
+                     review_entry.creator_user_id,
+                     review_entry.creator_full_name,
+                     review_entry.creator_abbreviation,
+                     review_entry.creator_department_name,
+                     review_entry.creator_email,
+                     review_entry.status,
+                     review_entry.classification,
+                     solution_items_name,
+                     solution_items_id,
+            (SELECT count(id) from comment where reviewentry_id =review_entry.id and status = 2) as comment_count
+             FROM review_entry
+             LEFT JOIN solution_items_overview ON  solution_items_overview.id =review_entry.id;
+          viewName: review_entry_overview

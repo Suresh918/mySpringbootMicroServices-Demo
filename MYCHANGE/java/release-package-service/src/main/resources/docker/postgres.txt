@@ -1,0 +1,5 @@
+docker run -p 5436:5432 --name postgres-release-package -e POSTGRES_DB=release-package -e POSTGRES_PASSWORD=postgres -d postgres
+#after connecting to schema execute the following command:
+CREATE extension tablefunc;
+
+#master-password: password

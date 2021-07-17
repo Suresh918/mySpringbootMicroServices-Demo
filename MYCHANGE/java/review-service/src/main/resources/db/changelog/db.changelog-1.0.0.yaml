@@ -1,0 +1,1515 @@
+databaseChangeLog:
+- changeSet:
+    id: create-extension-tablefunc
+    author: mabdirim
+    changes:
+      - sql:
+          sql: CREATE EXTENSION IF NOT EXISTS tablefunc;
+- changeSet:
+    id: create-table-aud_review
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_pkey
+            name: rev
+            type: INTEGER
+        - column:
+            name: revtype
+            type: SMALLINT
+        - column:
+            name: revend
+            type: INTEGER
+        - column:
+            name: revend_tstmp
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: completion_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: completion_date_mod
+            type: BOOLEAN
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: created_on_mod
+            type: BOOLEAN
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: creator_mod
+            type: BOOLEAN
+        - column:
+            name: executor_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: executor_department_name
+            type: VARCHAR(255)
+        - column:
+            name: executor_email
+            type: VARCHAR(255)
+        - column:
+            name: executor_full_name
+            type: VARCHAR(255)
+        - column:
+            name: executor_user_id
+            type: VARCHAR(255)
+        - column:
+            name: executor_mod
+            type: BOOLEAN
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: status_mod
+            type: BOOLEAN
+        - column:
+            name: title
+            type: VARCHAR(255)
+        - column:
+            name: title_mod
+            type: BOOLEAN
+        - column:
+            name: contexts_mod
+            type: BOOLEAN
+        tableName: aud_review
+- changeSet:
+    id: create-table-aud_review_contexts
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_contexts_pkey
+            name: rev
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_contexts_pkey
+            name: revtype
+            type: SMALLINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_contexts_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_contexts_pkey
+            name: contexts_order
+            type: INTEGER
+        - column:
+            name: revend
+            type: INTEGER
+        - column:
+            name: revend_tstmp
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: context_id
+            type: VARCHAR(255)
+        - column:
+            name: type
+            type: VARCHAR(255)
+        - column:
+            name: status
+            type: VARCHAR(255)
+        tableName: aud_review_contexts
+- changeSet:
+    id: create-table-aud_review_entry
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_pkey
+            name: rev
+            type: INTEGER
+        - column:
+            name: revtype
+            type: SMALLINT
+        - column:
+            name: revend
+            type: INTEGER
+        - column:
+            name: revend_tstmp
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: assignee_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: assignee_department_name
+            type: VARCHAR(255)
+        - column:
+            name: assignee_email
+            type: VARCHAR(255)
+        - column:
+            name: assignee_full_name
+            type: VARCHAR(255)
+        - column:
+            name: assignee_user_id
+            type: VARCHAR(255)
+        - column:
+            name: assignee_mod
+            type: BOOLEAN
+        - column:
+            name: classification
+            type: VARCHAR(255)
+        - column:
+            name: classification_mod
+            type: BOOLEAN
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: created_on_mod
+            type: BOOLEAN
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: creator_mod
+            type: BOOLEAN
+        - column:
+            name: description
+            type: VARCHAR(3072)
+        - column:
+            name: description_mod
+            type: BOOLEAN
+        - column:
+            name: remark
+            type: VARCHAR(3072)
+        - column:
+            name: remark_mod
+            type: BOOLEAN
+        - column:
+            name: sequence_number
+            type: INTEGER
+        - column:
+            name: sequence_number_mod
+            type: BOOLEAN
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: status_mod
+            type: BOOLEAN
+        - column:
+            name: contexts_mod
+            type: BOOLEAN
+        - column:
+            name: review_id
+            type: BIGINT
+        - column:
+            name: review_mod
+            type: BOOLEAN
+        - column:
+            name: reviewtask_id
+            type: BIGINT
+        - column:
+            name: review_task_mod
+            type: BOOLEAN
+        tableName: aud_review_entry
+- changeSet:
+    id: create-table-aud_review_entry_contexts
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_contexts_pkey
+            name: rev
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_contexts_pkey
+            name: revtype
+            type: SMALLINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_contexts_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_entry_contexts_pkey
+            name: contexts_order
+            type: INTEGER
+        - column:
+            name: revend
+            type: INTEGER
+        - column:
+            name: revend_tstmp
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: context_id
+            type: VARCHAR(255)
+        - column:
+            name: type
+            type: VARCHAR(255)
+        tableName: aud_review_entry_contexts
+- changeSet:
+    id: create-table-aud_review_task
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_task_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_review_task_pkey
+            name: rev
+            type: INTEGER
+        - column:
+            name: revtype
+            type: SMALLINT
+        - column:
+            name: revend
+            type: INTEGER
+        - column:
+            name: revend_tstmp
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: department_name
+            type: VARCHAR(255)
+        - column:
+            name: email
+            type: VARCHAR(255)
+        - column:
+            name: full_name
+            type: VARCHAR(255)
+        - column:
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: assignee_mod
+            type: BOOLEAN
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: created_on_mod
+            type: BOOLEAN
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: creator_mod
+            type: BOOLEAN
+        - column:
+            name: due_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: due_date_mod
+            type: BOOLEAN
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: status_mod
+            type: BOOLEAN
+        - column:
+            name: review_id
+            type: BIGINT
+        - column:
+            name: review_mod
+            type: BOOLEAN
+        tableName: aud_review_task
+- changeSet:
+    id: create-table-aud_updater
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aud_updater_pkey
+            name: id
+            type: INTEGER
+        - column:
+            name: abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: department_name
+            type: VARCHAR(255)
+        - column:
+            name: email
+            type: VARCHAR(255)
+        - column:
+            name: full_name
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: timestamp
+            type: BIGINT
+        - column:
+            name: user_id
+            type: VARCHAR(255)
+        tableName: aud_updater
+- changeSet:
+    id: create-table-comment
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: dtype
+            type: VARCHAR(31)
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: comment_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: comment_text
+            type: TEXT
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: replyto_id
+            type: BIGINT
+        - column:
+            name: reviewentry_id
+            type: BIGINT
+        tableName: comment
+- changeSet:
+    id: create-table-document_tag
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: document_tag_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: tags
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: document_tag_pkey
+            name: tags_order
+            type: INTEGER
+        tableName: document_tag
+- changeSet:
+    id: create-table-review
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: completion_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: executor_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: executor_department_name
+            type: VARCHAR(255)
+        - column:
+            name: executor_email
+            type: VARCHAR(255)
+        - column:
+            name: executor_full_name
+            type: VARCHAR(255)
+        - column:
+            name: executor_user_id
+            type: VARCHAR(255)
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: title
+            type: VARCHAR(255)
+        tableName: review
+- changeSet:
+    id: create-table-review_contexts
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_contexts_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: context_id
+            type: VARCHAR(255)
+        - column:
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: status
+            type: VARCHAR(255)
+        - column:
+            name: type
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_contexts_pkey
+            name: contexts_order
+            type: INTEGER
+        tableName: review_contexts
+- changeSet:
+    id: create-table-review_entry
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_entry_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: assignee_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: assignee_department_name
+            type: VARCHAR(255)
+        - column:
+            name: assignee_email
+            type: VARCHAR(255)
+        - column:
+            name: assignee_full_name
+            type: VARCHAR(255)
+        - column:
+            name: assignee_user_id
+            type: VARCHAR(255)
+        - column:
+            name: classification
+            type: VARCHAR(255)
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: description
+            type: VARCHAR(3072)
+        - column:
+            name: remark
+            type: VARCHAR(3072)
+        - column:
+            name: sequence_number
+            type: INTEGER
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: review_id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: reviewtask_id
+            type: BIGINT
+        tableName: review_entry
+- changeSet:
+    id: create-table-review_entry_contexts
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_entry_contexts_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: context_id
+            type: VARCHAR(255)
+        - column:
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: type
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_entry_contexts_pkey
+            name: contexts_order
+            type: INTEGER
+        tableName: review_entry_contexts
+- changeSet:
+    id: create-table-review_task
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: review_task_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: department_name
+            type: VARCHAR(255)
+        - column:
+            name: email
+            type: VARCHAR(255)
+        - column:
+            name: full_name
+            type: VARCHAR(255)
+        - column:
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: creator_department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: due_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: review_id
+            type: BIGINT
+        tableName: review_task
+- changeSet:
+    id: create-table-document_content
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: content
+            type: OID
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: document_content_pkey
+            name: document_id
+            type: BIGINT
+        tableName: document_content
+- changeSet:
+    id: create-table-document
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: dtype
+            type: VARCHAR(31)
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: document_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: created_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: creator_abbreviation
+            type: VARCHAR(255)
+        - column:
+            name: department_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_email
+            type: VARCHAR(255)
+        - column:
+            name: creator_full_name
+            type: VARCHAR(255)
+        - column:
+            name: creator_user_id
+            type: VARCHAR(255)
+        - column:
+            name: description
+            type: VARCHAR(255)
+        - column:
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: status
+            type: INTEGER
+        - column:
+            name: type
+            type: VARCHAR(255)
+        - column:
+            name: reviewentrycomment_id
+            type: BIGINT
+        tableName: document
+- changeSet:
+    id: create-table-shedlock
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: shedlock_pkey
+            name: name
+            type: VARCHAR(64)
+        - column:
+            constraints:
+              nullable: false
+            name: locked_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: lock_until
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: locked_by
+            type: VARCHAR(255)
+        tableName: shedlock
+- changeSet:
+    id: create-constraint-aud_review_entry_rev_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: rev
+        baseTableName: aud_review_entry
+        constraintName: aud_review_entry_rev_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_contexts_rev_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: rev
+        baseTableName: aud_review_contexts
+        constraintName: aud_review_contexts_rev_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_rev_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: rev
+        baseTableName: aud_review
+        constraintName: aud_review_rev_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_entry_contexts_rev_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: rev
+        baseTableName: aud_review_entry_contexts
+        constraintName: aud_review_entry_contexts_rev_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_entry_contexts_revend_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: revend
+        baseTableName: aud_review_entry_contexts
+        constraintName: aud_review_entry_contexts_revend_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_task_revend_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: revend
+        baseTableName: aud_review_task
+        constraintName: aud_review_task_revend_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_revend_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: revend
+        baseTableName: aud_review
+        constraintName: aud_review_revend_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_entry_revend_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: revend
+        baseTableName: aud_review_entry
+        constraintName: aud_review_entry_revend_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_task_rev_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: rev
+        baseTableName: aud_review_task
+        constraintName: aud_review_task_rev_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-constraint-aud_review_contexts_revend_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: revend
+        baseTableName: aud_review_contexts
+        constraintName: aud_review_contexts_revend_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: aud_updater
+        validate: true
+- changeSet:
+    id: create-view-comment_reply_overview
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT comment.id,
+              comment.comment_text,
+              comment.status,
+              comment.creator_user_id,
+              comment.creator_full_name,
+              comment.creator_abbreviation,
+              comment.creator_department_name,
+              comment.creator_email,
+              comment.created_on,
+              comment.replyto_id
+             FROM comment
+            WHERE (comment.reviewentry_id IS NULL);
+        viewName: comment_reply_overview
+- changeSet:
+    id: create-constraint-document_reviewentrycomment_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: reviewentrycomment_id
+        baseTableName: document
+        constraintName: document_reviewentrycomment_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: comment
+        validate: true
+- changeSet:
+    id: create-constraint-comment_replyto_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: replyto_id
+        baseTableName: comment
+        constraintName: comment_replyto_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: comment
+        validate: true
+- changeSet:
+    id: create-view-review_entry_comment_overview
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT comment.id,
+              comment.comment_text,
+              comment.status,
+              comment.creator_user_id,
+              comment.creator_full_name,
+              comment.creator_abbreviation,
+              comment.creator_department_name,
+              comment.creator_email,
+              comment.created_on,
+              ( SELECT count(c.id) AS count
+                     FROM comment c
+                    WHERE ((c.replyto_id = comment.id) AND (c.status = 2))) AS reply_count
+             FROM comment
+            WHERE (comment.replyto_id IS NULL);
+        viewName: review_entry_comment_overview
+- changeSet:
+    id: create-view-review_entry_overview
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT review_entry.id,
+              review_entry.description,
+              review_entry.remark,
+              review_entry.sequence_number,
+              review_entry.assignee_user_id,
+              review_entry.assignee_full_name,
+              review_entry.assignee_abbreviation,
+              review_entry.assignee_department_name,
+              review_entry.assignee_email,
+              review_entry.creator_user_id,
+              review_entry.creator_full_name,
+              review_entry.creator_abbreviation,
+              review_entry.creator_department_name,
+              review_entry.creator_email,
+              review_entry.status,
+              review_entry.classification,
+              ( SELECT count(comment.id) AS count
+                     FROM comment
+                    WHERE ((comment.reviewentry_id = review_entry.id) AND (comment.status = 2))) AS comment_count,
+              ( SELECT string_agg((review_entry_contexts.name)::text, ','::text) AS string_agg
+                     FROM review_entry_contexts
+                    WHERE (review_entry_contexts.id = review_entry.id)) AS solution_items
+             FROM review_entry;
+        viewName: review_entry_overview
+- changeSet:
+    id: create-constraint-review_contexts_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: id
+        baseTableName: review_contexts
+        constraintName: review_contexts_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review
+        validate: true
+- changeSet:
+    id: create-view-review_context_pivot
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT x.review_id,
+              x.releasepackage AS releasepackage_id,
+              y.releasepackage_name,
+              x.ecn AS ecn_id,
+              y.ecn_name,
+              x.teamcenter AS teamcenter_id,
+              y.teamcenter_name
+             FROM (( SELECT final_result.review_id,
+                      final_result.ecn,
+                      final_result.releasepackage,
+                      final_result.teamcenter
+                     FROM crosstab('select id as review_id , type, context_id from review_contexts order by 1, 2'::text) final_result(review_id bigint, ecn character varying, releasepackage character varying, teamcenter character varying)) x
+               JOIN ( SELECT o1.review_id,
+                      o1.releasepackage_name,
+                      o2.ecn_name,
+                      o3.teamcenter_name
+                     FROM ((( SELECT review_contexts.id AS review_id,
+                              review_contexts.name AS releasepackage_name
+                             FROM review_contexts
+                            WHERE ((review_contexts.type)::text = 'RELEASEPACKAGE'::text)) o1
+                       LEFT JOIN LATERAL ( SELECT review_contexts.name AS ecn_name
+                             FROM review_contexts
+                            WHERE (((review_contexts.type)::text = 'ECN'::text) AND (review_contexts.id = o1.review_id))) o2 ON (true))
+                       LEFT JOIN LATERAL ( SELECT review_contexts.name AS teamcenter_name
+                             FROM review_contexts
+                            WHERE (((review_contexts.type)::text = 'TEAMCENTER'::text) AND (review_contexts.id = o1.review_id))) o3 ON (true))) y ON ((x.review_id = y.review_id)));
+        viewName: review_context_pivot
+- changeSet:
+    id: create-constraint-review_entry_review_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: review_id
+        baseTableName: review_entry
+        constraintName: review_entry_review_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review
+        validate: true
+- changeSet:
+    id: create-view-review_overview
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT review.id,
+              review.title,
+              review.completion_date,
+              review.status,
+              ( SELECT concat(',', string_agg(concat(review_task.user_id, ':', review_task.status), ','::text), ',') AS string_agg
+                     FROM review_task
+                    WHERE (review_task.review_id = review.id)) AS review_tasks_assignee_info,
+              ( SELECT concat(',', string_agg((review_entry.assignee_user_id)::text, ','::text), ',') AS string_agg
+                     FROM review_entry
+                    WHERE (review_entry.review_id = review.id)) AS review_entry_assignees,
+              ( SELECT count(review_task.review_id) AS count
+                     FROM review_task
+                    WHERE (review_task.review_id = review.id)) AS review_task_count,
+              ( SELECT count(review_entry.review_id) AS count
+                     FROM review_entry
+                    WHERE (review_entry.review_id = review.id)) AS review_entry_count,
+              ( SELECT count(review_task.review_id) AS count
+                     FROM review_task
+                    WHERE ((review_task.status = ANY (ARRAY[4, 5, 6])) AND (review_task.review_id = review.id))) AS completed_review_task_count,
+              ( SELECT count(review_entry.review_id) AS count
+                     FROM review_entry
+                    WHERE ((review_entry.status = ANY (ARRAY[3, 4, 5])) AND (review_entry.review_id = review.id))) AS completed_review_entry_count,
+              review_context_pivot.releasepackage_id,
+              review_context_pivot.releasepackage_name,
+              review_context_pivot.ecn_id,
+              review_context_pivot.ecn_name,
+              review_context_pivot.teamcenter_id,
+              review_context_pivot.teamcenter_name
+             FROM (review
+               LEFT JOIN review_context_pivot ON ((review.id = review_context_pivot.review_id)))
+            GROUP BY review.id, review.title, review.completion_date, review_context_pivot.releasepackage_id, review_context_pivot.releasepackage_name, review_context_pivot.ecn_id, review_context_pivot.ecn_name, review_context_pivot.teamcenter_id, review_context_pivot.teamcenter_name;
+        viewName: review_overview
+- changeSet:
+    id: create-view-review_task_summary
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT review_task.id,
+              review_task.user_id,
+              review_task.full_name,
+              review_task.abbreviation,
+              review_task.department_name,
+              review_task.email,
+              review_task.status,
+              review_task.due_date,
+              count(review_entry.reviewtask_id) AS review_entry_count,
+              ( SELECT count(review_entry_1.reviewtask_id) AS count
+                     FROM review_entry review_entry_1
+                    WHERE ((review_entry_1.status = ANY (ARRAY[3, 4, 5])) AND (review_entry_1.reviewtask_id = review_task.id))) AS completed_review_entry_count
+             FROM (review_task
+               LEFT JOIN review_entry ON ((review_task.id = review_entry.reviewtask_id)))
+            GROUP BY review_task.id, review_task.user_id, review_task.full_name, review_task.abbreviation, review_task.status, review_task.due_date;
+        viewName: review_task_summary
+- changeSet:
+    id: create-constraint-review_entry_contexts_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: id
+        baseTableName: review_entry_contexts
+        constraintName: review_entry_contexts_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review_entry
+        validate: true
+- changeSet:
+    id: create-constraint-review_task_review_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: review_id
+        baseTableName: review_task
+        constraintName: review_task_review_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review
+        validate: true
+- changeSet:
+    id: create-view-review_summary
+    author: mabdirim
+    changes:
+    - createView:
+        fullDefinition: false
+        selectQuery: |-
+          SELECT review.id,
+              review.title,
+              count(review_task.review_id) AS review_task_count,
+              review.completion_date,
+              review.status,
+              ( SELECT count(review_task_1.review_id) AS count
+                     FROM review_task review_task_1
+                    WHERE ((review_task_1.status = ANY (ARRAY[4, 5, 6])) AND (review_task_1.review_id = review.id))) AS completed_review_task_count,
+              review_context_pivot.releasepackage_id,
+              review_context_pivot.releasepackage_name,
+              review_context_pivot.ecn_id,
+              review_context_pivot.ecn_name
+             FROM ((review
+               LEFT JOIN review_task ON ((review.id = review_task.review_id)))
+               LEFT JOIN review_context_pivot ON ((review.id = review_context_pivot.review_id)))
+            GROUP BY review.id, review.title, review_context_pivot.releasepackage_id, review_context_pivot.releasepackage_name, review_context_pivot.ecn_id, review_context_pivot.ecn_name;
+        viewName: review_summary
+- changeSet:
+    id: create-constraint-document_content_document_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: document_id
+        baseTableName: document_content
+        constraintName: document_content_document_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: document
+        validate: true
+- changeSet:
+    id: create-constraint-document_tag_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: id
+        baseTableName: document_tag
+        constraintName: document_tag_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: document
+        validate: true
+- changeSet:
+    id: create-constraint-comment_reviewentry_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: reviewentry_id
+        baseTableName: comment
+        constraintName: comment_reviewentry_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review_entry
+        validate: true
+- changeSet:
+    id: create-constraint-review_entry_reviewtask_id_fkey
+    author: mabdirim
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: reviewtask_id
+        baseTableName: review_entry
+        constraintName: review_entry_reviewtask_id_fkey
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: CASCADE
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: review_task
+        validate: true
+- changeSet:
+    id: create-sequence-hibernate_sequence
+    author: mabdirim
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 1
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: hibernate_sequence
+        startValue: 1
+- changeSet:
+    id: create-index-review_entry_review_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: review_id
+          indexName: review_entry_review_id_idx
+          tableName: review_entry
+- changeSet:
+    id: create-index-review_entry_reviewtask_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: reviewtask_id
+          indexName: review_entry_reviewtask_id_idx
+          tableName: review_entry
+- changeSet:
+    id: create-index-review_task_review_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: review_id
+          indexName: review_task_review_id_idx
+          tableName: review_task
+- changeSet:
+    id: create-index-aud_review_entry_rev_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: rev
+          indexName: aud_review_entry_rev_idx
+          tableName: aud_review_entry
+- changeSet:
+    id: create-index-aud_review_entry_revend_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: revend
+          indexName: aud_review_entry_revend_idx
+          tableName: aud_review_entry
+- changeSet:
+    id: create-index-aud_review_task_rev_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: rev
+          indexName: aud_review_task_rev_idx
+          tableName: aud_review_task
+- changeSet:
+    id: create-index-aud_review_task_revend_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: revend
+          indexName: aud_review_task_revend_idx
+          tableName: aud_review_task
+- changeSet:
+    id: create-index-aud_review_entry_contexts_revend_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: revend
+          indexName: aud_review_entry_contexts_revend_idx
+          tableName: aud_review_entry_contexts
+- changeSet:
+    id: create-index-aud_review_contexts_revend_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: revend
+          indexName: aud_review_contexts_revend_idx
+          tableName: aud_review_contexts
+- changeSet:
+    id: create-index-aud_review_rev_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: rev
+          indexName: aud_review_rev_idx
+          tableName: aud_review
+- changeSet:
+    id: create-index-aud_review_revend_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: revend
+          indexName: aud_review_revend_idx
+          tableName: aud_review
+- changeSet:
+    id: create-index-comment_reviewentry_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: reviewentry_id
+          indexName: comment_reviewentry_id_idx
+          tableName: comment
+- changeSet:
+    id: create-index-comment_replyto_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: replyto_id
+          indexName: comment_replyto_id_idx
+          tableName: comment
+- changeSet:
+    id: create-index-document_reviewentrycomment_id_idx
+    author: mabdirim
+    changes:
+      - createIndex:
+          columns:
+            - column:
+                name: reviewentrycomment_id
+          indexName: document_reviewentrycomment_id_idx
+          tableName: document

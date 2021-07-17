@@ -1,0 +1,919 @@
+{
+  "com.example.mirai.projectname.releasepackageservice.releasepackage.model.ReleasePackage": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "SUBMIT",
+          "SUBMIT_AGGREGATE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageClosed() and !isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "(!(isReleasePackageClosed() or isReleasePackageObsoleted())) and !isReleasePackageSecure()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageClosed() and !isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted() and !isReleasePackageSecure()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": "isReleasePackageSubmitted()",
+        "case_actions": [
+          "CREATE"
+        ]
+      },
+      {
+        "filter": "isReleasePackageCreated() and ((!isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted()) or (isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted() and isReleasePackageHavingChangeObjectAndIsReadyForReleaseOrReleasedOrClosed()))",
+        "case_actions": [
+          "READY"
+        ]
+      },
+      {
+        "filter": "(isReleasePackageSubmitted() or isReleasePackageCreated())",
+        "case_actions": [
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isReleasePackageReleased()",
+        "case_actions": [
+          "REREADY"
+        ]
+      },
+      {
+        "filter": "isReleasePackageReadyForRelease() or isReleasePackageReleased()",
+        "case_actions": [
+          "RECREATE"
+        ]
+      },
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "CREATE_MY_TEAM"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "SUBMIT",
+          "SUBMIT_AGGREGATE",
+          "CREATE_AGGREGATE",
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageClosed() and !isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      },
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_PREREQUISITE",
+          "UPDATE_PREREQUISITE",
+          "REMOVE_PREREQUISITE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      },
+      {
+        "filter": "(isReleasePackageCreated() or isReleasePackageReleased()) and isReleasePackageTypeHwOrOp()",
+        "case_actions": [
+          "CREATE_REVIEW"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": "isReleasePackageSubmitted()",
+        "case_actions": [
+          "CREATE"
+        ]
+      },
+      {
+        "filter": "isReleasePackageCreated() and ((!isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted()) or (isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted() and isReleasePackageHavingChangeObjectAndIsReadyForReleaseOrReleasedOrClosed()))",
+        "case_actions": [
+          "READY"
+        ]
+      },
+      {
+        "filter": "isChangeNoticePlanned() and isReleasePackageReadyForRelease() and ((!isReleasePackageTypeWorkInstruction()) or (isReleasePackageTypeWorkInstruction() and isReleasePackageHavingChangeObjectAndIsReleasedOrPublished()))",
+        "case_actions": [
+          "RELEASE"
+        ]
+      },
+      {
+        "filter": "isReleasePackageReleased() and ((!isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted()) or (isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted() and isReleasePackageHavingChangeObjectAndIsPublished()))",
+        "case_actions": [
+          "CLOSE"
+        ]
+      },
+      {
+        "filter": "(isReleasePackageSubmitted() or isReleasePackageCreated())",
+        "case_actions": [
+          "OBSOLETE"
+        ]
+      },
+      {
+        "filter": "isReleasePackageReleased()",
+        "case_actions": [
+          "REREADY"
+        ]
+      },
+      {
+        "filter": "isReleasePackageReadyForRelease() or isReleasePackageReleased()",
+        "case_actions": [
+          "RECREATE"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE_AGGREGATE",
+          "READ",
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageClosed() and !isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": null,
+        "case_actions": [
+          "FETCH"
+        ]
+      },
+
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_PREREQUISITE",
+          "UPDATE_PREREQUISITE",
+          "REMOVE_PREREQUISITE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      }
+    ],
+    "MyTeamMember.development&EngineeringProjectLead": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "CREATE_ACTION",
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "UPDATE",
+          "CREATE_ACTION"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ],
+    "ReleasePackage.executor": [
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_PREREQUISITE",
+          "UPDATE_PREREQUISITE",
+          "REMOVE_PREREQUISITE"
+        ]
+      },
+      {
+        "filter": "!isReleasePackageObsoleted()",
+        "case_actions": [
+          "CREATE_ACTION"
+        ]
+      },
+      {
+        "filter": "(isReleasePackageCreated() or isReleasePackageReleased()) and isReleasePackageTypeHwOrOp()",
+        "case_actions": [
+          "CREATE_REVIEW"
+        ]
+      }
+
+    ],
+    "ReleasePackage.change-owner": [
+      {
+        "filter": "isChangeOwnerTypeCreator() and isReleasePackageSubmitted()",
+        "case_actions": [
+          "CREATE"
+        ]
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and isReleasePackageCreated() and ((!isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted()) or (isReleasePackageTypeWorkInstruction() and isReleasePackageHavingReviewAndIsCompleted() and isReleasePackageHavingChangeObjectAndIsReadyForReleaseOrReleasedOrClosed()))",
+        "case_actions": [
+          "READY"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.myteam.model.ReleasePackageMyTeam": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "CREATE_MY_TEAM",
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "MyTeamMember.development&EngineeringProjectLead": [
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": "!(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": "!isReleasePackageSecure() and !(isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": "!isReleasePackageSecure() and !( isReleasePackageClosed() or isReleasePackageObsoleted())",
+        "case_actions": [
+          "ADD_MY_TEAM_MEMBER",
+          "UPDATE",
+          "REMOVE_MY_TEAM_MEMBER",
+          "ADD_ROLE_TO_MEMBER",
+          "REMOVE_ROLE_FROM_MEMBER"
+        ]
+      },
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.comment.model.ReleasePackageComment": {
+    "user": [
+      {
+        "filter": "!isReleasePackageSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_rule": "(releasePackage.isSecure:false) and ((creator.user_id:${loggedInUser} and status:1) or (status@2,3))",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReleasePackageComment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed() and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isReleasePackageNotObsoleted() and isReleasePackageNotClosed()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!hasReplies() and isPublished() and isReleasePackageNotObsoleted() and isReleasePackageNotClosed()",
+        "case_actions": [
+          "REMOVE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and !hasReplies() and isReleasePackageNotObsoleted()",
+        "case_actions": [
+          "DELETE"
+        ]
+      },
+      {
+        "filter": "isPublished() and isReleasePackageNotObsoleted() and isReleasePackageNotClosed()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and isReleasePackageNotObsoleted() and isReleasePackageNotClosed()",
+        "case_actions": [
+          "PUBLISH",
+          "UPDATE"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.document.model.ReleasePackageCommentDocument": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "ReleasePackageCommentDocument.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.document.model.ReleasePackageDocument": {
+    "user": [
+      {
+        "filter": "!isReleasePackageSecure()",
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ],
+    "ReleasePackageDocument.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}

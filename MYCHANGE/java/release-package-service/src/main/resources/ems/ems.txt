@@ -1,0 +1,2 @@
+create queue com.example.mirai.projectname.releasepackageservice.changerequest
+create bridge source=topic:com.example.mirai.projectname.changerequestservice.changerequest target=queue:com.example.mirai.projectname.releasepackageservice.changerequest selector="type in ('CREATE_AGGREGATE','MERGE','SUBMIT','DEFINE_SOLUTION','ANALYZE_IMPACT','APPROVE','CLOSE','REJECT', 'OBSOLETE', 'REDRAFT', 'RESUBMIT', 'REDEFINE_SOLUTION', 'REANALYZE_IMPACT', 'RECONCILIATION')"

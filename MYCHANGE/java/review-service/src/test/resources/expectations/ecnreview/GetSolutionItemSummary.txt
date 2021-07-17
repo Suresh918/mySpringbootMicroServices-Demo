@@ -1,0 +1,32 @@
+[
+    {
+        "id": "4022.683.22941",
+        "title": "SR BT M10 FLAT HRHD +7",
+        "type": [
+            "Teamcenter",
+            "SAP MDG"
+        ]
+    },
+    {
+        "id": "ANCI.683.22941",
+        "title": "SR BT M10 FLAT HRHD +7 ANCI",
+        "type": [
+            "Teamcenter",
+            "SAP MDG"
+        ]
+    },
+    {
+        "id": "RPHV.202.22203",
+        "title": "RPHV.202.22203",
+        "type": [
+            "SAP MDG"
+        ]
+    },
+    {
+        "id": "ANCI.683.22801",
+        "title": "SR BT M10 FLAT HRHD -7 ANCI",
+        "type": [
+            "Teamcenter"
+        ]
+    }
+  ]

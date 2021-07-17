@@ -1,0 +1,21 @@
+user-to-update-property,property-to-update,releasepackagedocument-status-in-which-to-update-property,expected-result,release package-status
+change-specialist-2,description,PUBLISHED,AUTHORIZED,DRAFTED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,DRAFTED
+ReleasePackage.myTeam-member,description,PUBLISHED,AUTHORIZED,DRAFTED
+ReleasePackage.change-control-board-member,description,PUBLISHED,AUTHORIZED,DRAFTED
+ReleasePackage.change-board-member,description,PUBLISHED,AUTHORIZED,DRAFTED
+change-specialist-2,description,PUBLISHED,AUTHORIZED,CREATED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,CREATED
+ReleasePackage.myTeam-member,description,PUBLISHED,AUTHORIZED,CREATED
+ReleasePackage.change-control-board-member,description,PUBLISHED,AUTHORIZED,CREATED
+ReleasePackage.change-board-member,description,PUBLISHED,AUTHORIZED,CREATED
+change-specialist-2,description,PUBLISHED,AUTHORIZED,READY_FOR_RELEASE
+change-specialist-3,description,PUBLISHED,AUTHORIZED,READY_FOR_RELEASE
+ReleasePackage.myTeam-member,description,PUBLISHED,AUTHORIZED,READY_FOR_RELEASE
+ReleasePackage.change-control-board-member,description,PUBLISHED,AUTHORIZED,READY_FOR_RELEASE
+ReleasePackage.change-board-member,description,PUBLISHED,AUTHORIZED,READY_FOR_RELEASE
+change-specialist-2,description,PUBLISHED,AUTHORIZED,RELEASED
+change-specialist-3,description,PUBLISHED,AUTHORIZED,RELEASED
+ReleasePackage.myTeam-member,description,PUBLISHED,AUTHORIZED,RELEASED
+ReleasePackage.change-control-board-member,description,PUBLISHED,AUTHORIZED,RELEASED
+ReleasePackage.change-board-member,description,PUBLISHED,AUTHORIZED,RELEASED

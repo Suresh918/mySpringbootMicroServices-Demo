@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: modify-data-type-job.error_description
+      author: ptummala
+      changes:
+        - modifyDataType:
+            newDataType: TEXT
+            tableName: job
+            columnName: error_description
+  - changeSet:
+      id: drop-constraint-job_owner_groups_id_name_fkey
+      author: ptummala
+      changes:
+        - dropForeignKeyConstraint:
+            baseColumnNames: id,name
+            baseTableName: job_owner_groups
+            constraintName: job_owner_groups_id_name_fkey
+            referencedColumnNames: id,name
+            referencedTableName: job
+            validate: true
+  - changeSet:
+      id: create-constraint-job_owner_groups_id_name_fkey_2
+      author: ptummala
+      runOnChange: true
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: id,name
+            baseTableName: job_owner_groups
+            constraintName: job_owner_groups_id_name_fkey
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: CASCADE
+            onUpdate: NO ACTION
+            referencedColumnNames: id,name
+            referencedTableName: job
+            validate: true

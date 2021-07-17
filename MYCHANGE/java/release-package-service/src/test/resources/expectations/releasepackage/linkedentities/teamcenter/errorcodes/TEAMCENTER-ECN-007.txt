@@ -1,0 +1,1 @@
+{"application_status_code":"TEAMCENTER-ECN-007","status":403,"error":"Forbidden","severity":3,"message":null,"path":"/release-packages/<RELEASE-PACKAGE-ID>/case-action/<CASE-ACTION>","timestamp":"<TIME-STAMP>"}

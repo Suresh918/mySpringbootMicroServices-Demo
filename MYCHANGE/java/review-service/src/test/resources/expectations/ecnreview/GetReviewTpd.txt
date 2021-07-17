@@ -1,0 +1,28 @@
+[
+   {
+      "name": "4022.683.22941-199-001-01",
+      "revision": null,
+      "description": "Purchasing specification",
+      "document_type": "PDF",
+      "document_part": "001",
+      "document_version": "01",
+      "document_status": null,
+      "new_change_number": null,
+      "document_link": "https://ics-host.example.com/awc/#/com.siemens.splm.clientfx.tcui.xrt.showObject?uid=wOr9RczVQS4FxA",
+      "defect_count": 0,
+      "ID": null
+   },
+   {
+      "name": "4022.683.22941-195-001-01",
+      "revision": null,
+      "description": "Pack/lock/transport/storage specification",
+      "document_type": "PDF",
+      "document_part": "001",
+      "document_version": "01",
+      "document_status": null,
+      "new_change_number": null,
+      "document_link": "https://ics-host.example.com/awc/#/com.siemens.splm.clientfx.tcui.xrt.showObject?uid=wih9RczVQS4FxA",
+      "defect_count": 0,
+      "ID": null
+   }
+]

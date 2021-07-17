@@ -1,0 +1,19 @@
+{
+    "id":<ID>,
+    "title":"<DATA_IDENTIFIER>_title",
+    "review_task_count":2,
+    "review_entry_count":2,
+    "completion_date":"<COMPLETION_DATE>",
+    "status":4,
+    "releasepackage_id":"<DATA_IDENTIFIER>_releasepackage_context_id",
+    "releasepackage_name":"<DATA_IDENTIFIER>_releasepackage_name",
+    "teamcenter_id":"<DATA_IDENTIFIER>_teamcenter_context_id",
+    "teamcenter_name":"<DATA_IDENTIFIER>_teamcenter_name",
+    "ecn_id":"<DATA_IDENTIFIER>_ecn_context_id",
+    "ecn_name":"<DATA_IDENTIFIER>_ecn_name",
+    "status_label":"Completed",
+    "completed_review_entry_count":1,
+    "completed_review_task_count":1,
+    "review_tasks_assignee_info":",<DATA_IDENTIFIER>-1_review-task-assignee_user_id:1,<DATA_IDENTIFIER>-2_review-task-assignee_user_id:5,",
+    "review_entry_assignees":",<DATA_IDENTIFIER>-1_review-entry-assignee_user_id,<DATA_IDENTIFIER>-2_review-entry-assignee_user_id,"
+}

@@ -1,0 +1,26 @@
+{
+    "id": <ID>,
+    "sequence_number": 1,
+    "status": 5,
+    "status_label": "Done",
+    "description": "<DATA_IDENTIFIER>_description",
+    "classification": "<DATA_IDENTIFIER>_classification",
+    "remark": null,
+    "solution_items": "<DATA_IDENTIFIER>_solution_item_name",
+    "comment_count": 0,
+    "case_permissions": null,
+    "assignee": {
+        "user_id":"<DATA_IDENTIFIER>_review-entry-assignee_user_id",
+        "full_name":"<DATA_IDENTIFIER>_review-entry-assignee_full_name",
+        "email":"<DATA_IDENTIFIER>_review-entry-assignee_email",
+        "department_name":"<DATA_IDENTIFIER>_review-entry-assignee_department_name",
+        "abbreviation":"<DATA_IDENTIFIER>_review-entry-assignee_abbreviation"
+    },
+    "creator": {
+        "user_id":"<DATA_IDENTIFIER>_review-entry-creator_user_id",
+        "full_name":"<DATA_IDENTIFIER>_review-entry-creator_full_name",
+        "email":"<DATA_IDENTIFIER>_review-entry-creator_email",
+        "department_name":"<DATA_IDENTIFIER>_review-entry-creator_department_name",
+        "abbreviation":"<DATA_IDENTIFIER>_review-entry-creator_abbreviation"
+    }
+}

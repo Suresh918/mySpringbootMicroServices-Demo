@@ -1,0 +1,697 @@
+{
+  "com.example.mirai.projectname.reviewservice.review.model.Review": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "CREATE",
+          "CREATE-AGGREGATE"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "CREATE",
+          "CREATE-AGGREGATE"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "CREATE",
+          "CREATE-AGGREGATE"
+        ]
+      }
+    ],
+    "ReviewTask.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and (isReviewTaskOpen() or isReviewTaskAccepted())",
+        "case_actions": [
+          "CREATEREVIEWENTRY"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "CREATE",
+          "CREATE-AGGREGATE",
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewLocked()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "isReviewOpen() or isReviewValidationStarted()",
+        "case_actions": [
+          "LOCK"
+        ]
+      },
+      {
+        "filter": "(isReviewLocked() or isReviewCompleted()) and isRPInValidStatus()",
+        "case_actions": [
+          "STARTVALIDATION"
+        ]
+      },
+      {
+        "filter": "isReviewValidationStarted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isReviewOpen() or isReviewLocked() or isReviewValidationStarted()",
+        "case_actions": [
+          "CREATEREVIEWTASK"
+        ]
+      }
+    ],
+    "Review.executor": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewOpen() or isReviewValidationStarted()",
+        "case_actions": [
+          "LOCK"
+        ]
+      },
+      {
+        "filter": "isReviewLocked()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "(isReviewLocked() or isReviewCompleted()) and isRPInValidStatus()",
+        "case_actions": [
+          "STARTVALIDATION"
+        ]
+      },
+      {
+        "filter": "isReviewValidationStarted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isReviewOpen() or isReviewLocked() or isReviewValidationStarted()",
+        "case_actions": [
+          "CREATEREVIEWTASK"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.reviewservice.reviewtask.model.ReviewTask": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskNotFinalized() or isReviewTaskFinalized()) and !isReviewCompleted()",
+        "case_actions": [
+          "UNLOCK"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted() or isReviewTaskCompleted() or isReviewTaskRejected()) and !isReviewCompleted()",
+        "case_actions": [
+          "LOCK"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !hasReviewEntry() and !isReviewCompleted()",
+        "case_actions": [
+          "DELETE"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Review.executor": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskNotFinalized() or isReviewTaskFinalized()) and !isReviewCompleted()",
+        "case_actions": [
+          "UNLOCK"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted() or isReviewTaskCompleted() or isReviewTaskRejected()) and !isReviewCompleted()",
+        "case_actions": [
+          "LOCK"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !hasReviewEntry() and !isReviewCompleted() ",
+        "case_actions": [
+          "DELETE"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      }
+    ],
+    "ReviewTask.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewTaskOpen() and !isReviewCompleted()",
+        "case_actions": [
+          "ACCEPT",
+          "REJECT"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskFinalized() or isReviewTaskCompleted() or isReviewTaskRejected()) and isReviewOpen()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "(isReviewTaskOpen() or isReviewTaskAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "CREATEREVIEWENTRY"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.reviewservice.reviewentry.model.ReviewEntry": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewEntryOpen() and !isReviewCompleted()",
+        "case_actions": [
+          "ACCEPT",
+          "REJECT",
+          "MARKDUPLICATE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryAccepted() or isReviewEntryMarkedDuplicate() or isReviewEntryRejected() or isReviewEntryCompleted())  and !isReviewCompleted()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Review.executor": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewEntryOpen() and !isReviewCompleted()",
+        "case_actions": [
+          "ACCEPT",
+          "REJECT",
+          "MARKDUPLICATE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryAccepted() or isReviewEntryMarkedDuplicate() or isReviewEntryRejected() or isReviewEntryCompleted()) and !isReviewCompleted()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ],
+    "ReviewTask.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and isReviewOpen() and (isReviewTaskOpen() or isReviewTaskAccepted()) and isAuditorReviewTaskAssignee()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "isReviewEntryOpen() and (isReviewTaskOpen() or isReviewTaskAccepted()) and isReviewOpen() and isAuditorReviewTaskAssignee()",
+        "case_actions": [
+          "DELETE"
+        ]
+      }
+    ],
+    "ReviewEntry.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "isReviewEntryOpen() and !isReviewCompleted()",
+        "case_actions": [
+          "ACCEPT",
+          "REJECT",
+          "MARKDUPLICATE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryAccepted() or isReviewEntryMarkedDuplicate() or isReviewEntryRejected() or isReviewEntryCompleted()) and !isReviewCompleted()",
+        "case_actions": [
+          "REOPEN"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "COMPLETE"
+        ]
+      },
+      {
+        "filter": "(isReviewEntryOpen() or isReviewEntryAccepted()) and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.reviewservice.comment.model.ReviewEntryComment": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and getReviewEntry() != null and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "Review.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "Review.executor": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and getReviewEntry() != null and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReviewTask.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and getReviewEntry() != null and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReviewEntry.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and getReviewEntry() != null and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ],
+    "ReviewEntryComment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted() and getReviewEntry() != null and isPublished()",
+        "case_actions": [
+          "CREATE_COMMENT"
+        ]
+      },
+      {
+        "filter": "!isReviewCompleted()",
+        "case_actions": [
+          "CREATE_DOCUMENT"
+        ]
+      },
+      {
+        "filter": "!hasReplies() and isPublished() and !isReviewCompleted()",
+        "case_actions": [
+          "REMOVE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and !hasReplies() and !isReviewCompleted()",
+        "case_actions": [
+          "DELETE"
+        ]
+      },
+      {
+        "filter": "isPublished() and !isReviewCompleted()",
+        "case_actions": [
+          "UPDATE"
+        ]
+      },
+      {
+        "filter": "isDrafted() and !isReviewCompleted()",
+        "case_actions": [
+          "PUBLISH",
+          "UPDATE"
+        ]
+      },
+      {
+        "fetch_rule": "(creator.user_id:${loggedInUser} and status:1) or (status@2,3)",
+        "case_actions": [
+          "FETCH"
+        ]
+      }
+    ]
+  },
+  "com.example.mirai.projectname.reviewservice.document.model.ReviewEntryCommentDocument": {
+    "user": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Review.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Review.executor": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "REMOVE"
+        ]
+      }
+    ],
+    "ReviewTask.assignee": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ"
+        ]
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "REMOVE"
+        ]
+      }
+    ],
+    "ReviewEntryCommentDocument.creator": [
+      {
+        "filter": null,
+        "case_actions": [
+          "READ",
+          "UPDATE",
+          "REMOVE",
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}

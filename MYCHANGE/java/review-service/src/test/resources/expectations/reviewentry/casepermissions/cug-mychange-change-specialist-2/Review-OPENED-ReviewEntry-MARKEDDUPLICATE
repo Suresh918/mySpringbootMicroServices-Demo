@@ -1,0 +1,112 @@
+{
+    "case_actions": [
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "REOPEN",
+         "is_allowed": true,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "COMPLETE",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "MARKDUPLICATE",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [],
+            "case_action": "DELETE",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "CREATE",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [],
+            "case_action": "CREATE_COMMENT",
+         "is_allowed": true,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [],
+            "case_action": "UPDATE",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [],
+            "case_action": "READ",
+         "is_allowed": true,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [],
+            "case_action": "FETCH",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "REJECT",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        },
+        {
+            "mandatory_properties_regexps": [
+                "^description$",
+                "^assignee$",
+                "^classification$"
+            ],
+            "case_action": "ACCEPT",
+         "is_allowed":false,
+         "mandatory_properties_spel":null
+        }
+    ],
+    "case_properties": {
+        "unreadable_property_regexps": [],
+        "readable_property_regexps": [
+            "^description$",
+            "^assignee$",
+            "^contexts$",
+            "^remark$",
+            "^classification$"
+        ],
+        "unupdatable_property_regexps": [
+            "^description$",
+            "^assignee$",
+            "^contexts$",
+            "^remark$",
+            "^classification$"
+        ],
+        "updatable_property_regexps": []
+    }
+}

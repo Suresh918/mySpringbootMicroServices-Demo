@@ -1,0 +1,30 @@
+[
+    {
+        "reviewEntry_type": "ZENG",
+        "serial_number_profile": null,
+        "tools_packaging_category": null,
+        "tools_packaging_category_description": null,
+        "sourcing_plant": null,
+        "regular_part_description": null,
+        "failure_rate": null,
+        "plant_specific": [
+            {
+                "plant_name": "US21",
+                "disco_indicator": null,
+                "disco_description": null,
+                "in_house_pdt": "0",
+                "ref_reviewEntry": null,
+                "object_dependency": null,
+                "spec_procurement_type": null,
+                "spec_procurement_type_description": null,
+                "plant_status": "EB",
+                "pdt": "0",
+                "mrp_profile": null,
+                "mrp_controller": null,
+                "followup_reviewEntry": null
+            }
+          ],
+          "defect_count": 0,
+          "reviewEntryID": null
+      }
+   ]

@@ -1,0 +1,36 @@
+create topic com.example.mirai.projectname.reviewservice.review
+create jndiname com.example.mirai.projectname.reviewservice.review topic com.example.mirai.projectname.reviewservice.review
+addprop topic com.example.mirai.projectname.reviewservice.review global
+grant topic com.example.mirai.projectname.reviewservice.review user=EMS-SERVER all
+grant topic com.example.mirai.projectname.reviewservice.review user=projectname all
+
+create topic com.example.mirai.projectname.reviewservice.reviewtask
+create jndiname com.example.mirai.projectname.reviewservice.reviewtask topic com.example.mirai.projectname.reviewservice.reviewtask
+grant topic com.example.mirai.projectname.reviewservice.reviewtask user=projectname all
+
+create topic com.example.mirai.projectname.reviewservice.reviewentry
+create jndiname com.example.mirai.projectname.reviewservice.reviewentry topic com.example.mirai.projectname.reviewservice.reviewentry
+grant topic com.example.mirai.projectname.reviewservice.reviewentry user=projectname all
+
+
+create topic com.example.mirai.projectname.bpmevent
+addprop topic com.example.mirai.projectname.bpmevent global
+
+create queue com.example.mirai.projectname.reviewservice.bpmevent.releasepackage
+create jndiname com.example.mirai.projectname.reviewservice.bpmevent.releasepackage queue com.example.mirai.projectname.reviewservice.bpmevent.releasepackage
+grant queue com.example.mirai.projectname.reviewservice.bpmevent.releasepackage user=projectname all
+create bridge source=topic:com.example.mirai.projectname.bpmevent target=queue:com.example.mirai.projectname.reviewservice.bpmevent.releasepackage selector="JMSCorrelationID LIKE '%com.example.bpm.MC.DataModel.ReleasePackage%'"
+
+create topic com.example.mirai.projectname.bwevent
+addprop topic com.example.mirai.projectname.bwevent global
+
+create queue com.example.mirai.projectname.reviewservice.bwevent.releasepackage
+create jndiname com.example.mirai.projectname.reviewservice.bwevent.releasepackage queue com.example.mirai.projectname.reviewservice.bwevent.releasepackage
+grant queue com.example.mirai.projectname.reviewservice.bwevent.releasepackage user=projectname all
+create bridge source=topic:com.example.mirai.projectname.bwevent target=queue:com.example.mirai.projectname.reviewservice.bwevent.releasepackage selector="CaseType LIKE '%ReleasePackage%'"
+
+----------------------------------
+#BPI EMS SERVER
+create topic com.example.mirai.projectname.bpmevent
+addprop topic com.example.mirai.projectname.bpmevent global
+create bridge source=topic:example.TOPIC.am_bin_bpm_bgs_orchestration.BPMEventProcessInstanceData target=topic:com.example.mirai.projectname.bpmevent selector="EngineID='MC' and MessageID IN ('BDS_GLOBAL_DATA_UPDATE_CASE')"

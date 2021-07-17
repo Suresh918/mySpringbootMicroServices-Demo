@@ -1,0 +1,3 @@
+user-to-perform-case-action,status-of-comment,missing-releasepackage-comment-property,case-action-to-perform,expected-result
+ReleasePackageComment.creator,DRAFTED,comment_text,DELETE,AUTHORIZED
+ReleasePackageComment.creator,PUBLISHED,comment_text,DELETE,UNAUTHORIZED

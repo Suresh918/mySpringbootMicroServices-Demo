@@ -1,0 +1,26 @@
+user|test case description|criteria|view criteria
+cug-projectname-change-specialist-2|id is|id:<ID>&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|title like|title:"*<DATA_IDENTIFIER>*"&page=0&size=1&slice-select=results&sort=id,desc|
+cug-projectname-change-specialist-2|title is|title:"<DATA_IDENTIFIER>_title"&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|status is|status:4&page=0&size=1&slice-select=results&sort=id,desc|
+cug-projectname-change-specialist-2|status in|status@1,4&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|executor user id is|executor.user_id:"<DATA_IDENTIFIER>_executor_user_id"&page=0&size=1&slice-select=results&sort=id,desc|
+cug-projectname-change-specialist-2|creator user id is|creator.user_id:"<DATA_IDENTIFIER>_review-creator_user_id"&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|completion date is|completion_date:"<COMPLETION_DATE>"&page=0&size=1&slice-select=results&sort=id,desc|
+cug-projectname-change-specialist-2|completion date between|completion_date-"<COMPLETION_DATE>,<COMPLETION_DATE>"&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|review task assignee is||review_tasks_assignee_info:"*,<DATA_IDENTIFIER>-2_review-task-assignee_user_id:*"&page=0&size=1&slice-select=results&sort=id,desc
+cug-projectname-change-specialist-2|review entry assignee is||review_entry_assignees:"*,<DATA_IDENTIFIER>-1_review-entry-assignee_user_id,*"&page=0&size=1&slice-select=results&sort=id,desc
+
+cug-projectname-change-specialist-2|release package context like|contexts.context_id:"*<DATA_IDENTIFIER>*" and contexts.type:"RELEASEPACKAGE"&page=0&size=1&slice-select=results&sort=id,desc|
+cug-projectname-change-specialist-2|teamcenter context like|contexts.context_id:"*<DATA_IDENTIFIER>*" and contexts.type:"TEAMCENTER"&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|and-ed all conditions|(title:"<DATA_IDENTIFIER>_title" and status:4  and executor.user_id:"<DATA_IDENTIFIER>_executor_user_id" and creator.user_id:"<DATA_IDENTIFIER>_review-creator_user_id"  and  contexts.context_id:"*<DATA_IDENTIFIER>*" and contexts.type:"RELEASEPACKAGE")&page=0&size=1&slice-select=results&sort=id,desc|(review_tasks_assignee_info:"*,<DATA_IDENTIFIER>-2_review-task-assignee_user_id:*" and review_entry_assignees:"*,<DATA_IDENTIFIER>-1_review-entry-assignee_user_id,*")
+
+cug-projectname-change-specialist-2|and-ed completion are all conditions|(title:"<DATA_IDENTIFIER>_title" and completion_date:"<COMPLETION_DATE>")&page=0&size=1&slice-select=results&sort=id,desc|
+
+cug-projectname-change-specialist-2|or-and all conditions|(title:"NOTFOUND") or (title:"<DATA_IDENTIFIER>_title" and status:4  and executor.user_id:"<DATA_IDENTIFIER>_executor_user_id" and creator.user_id:"<DATA_IDENTIFIER>_review-creator_user_id"  and  contexts.context_id:"*<DATA_IDENTIFIER>*" and contexts.type:"RELEASEPACKAGE")&page=0&size=1&slice-select=results&sort=id,desc|(review_tasks_assignee_info:"*,<DATA_IDENTIFIER>-2_review-task-assignee_user_id:*" and review_entry_assignees:"*,<DATA_IDENTIFIER>-1_review-entry-assignee_user_id,*")

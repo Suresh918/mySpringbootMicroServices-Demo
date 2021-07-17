@@ -1,0 +1,5 @@
+user-to-execute-delete,comment-status,input,commentdocument-caseaction,expected-result,document-status
+ReleasePackageComment.creator,DRAFTED,tags,DELETE,AUTHORIZED,PUBLISHED
+ReleasePackageComment.creator,PUBLISHED,tags,DELETE,AUTHORIZED,PUBLISHED
+ReleasePackageCommentDocument.creator,DRAFTED,tags,DELETE,AUTHORIZED,PUBLISHED
+ReleasePackageCommentDocument.creator,PUBLISHED,tags,DELETE,AUTHORIZED,PUBLISHED

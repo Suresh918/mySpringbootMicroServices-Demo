@@ -1,0 +1,16 @@
+{
+    "id":<ID>,
+    "review_entry_count":1,
+    "completed_review_entry_count":0,
+    "due_date":"<DUE_DATE>",
+    "status":1,
+    "status_label":"Open",
+    "assignee":{
+        "user_id":"<DATA_IDENTIFIER>_review-task-assignee_user_id",
+        "full_name":"<DATA_IDENTIFIER>_review-task-assignee_full_name",
+        "email":"<DATA_IDENTIFIER>_review-task-assignee_email",
+        "department_name":"<DATA_IDENTIFIER>_review-task-assignee_department_name",
+        "abbreviation":"<DATA_IDENTIFIER>_review-task-assignee_abbreviation"
+    },
+    "case_permissions": null
+}

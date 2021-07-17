@@ -1,0 +1,1190 @@
+{
+  "com.example.mirai.projectname.releasepackageservice.releasepackage.model.ReleasePackage": {
+    "user": [
+      {
+        "filter": "getStatus().equals(1) and !isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated()) and !isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+        ],
+        "private_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(2) and !isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(3) and !isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(4) and !isReleasePackageSecure()",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2)",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(3)",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^title$",
+          "^status$",
+          "^change_specialist3$|^changeSpecialist3$",
+          "^executor$",
+          "^planned_release_date$|^plannedReleaseDate$",
+          "^planned_effective_date$|^plannedEffectiveDate$",
+          "^sap_change_control$|^sapChangeControl$",
+          "^prerequisites_applicable$|^prerequisitesApplicable$",
+          "^prerequisites_detail$|^prerequisitesDetail$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^project_id$|^projectId$",
+          "^product_id$|^productId$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeCreator()",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeProject()",
+        "private_fields": [],
+        "protected_fields": ["^types$"],
+        "public_fields": []
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": [
+        ]
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "MyTeamMember.user": [
+      {
+        "filter": "getStatus().equals(1)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(2) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeProject()",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(3) and isChangeOwnerTypeCreator()",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^status$",
+          "^release_package_prerequisites$|^releasePackagePrerequisites$",
+          "^tags$",
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": [
+        ]
+      },
+      {
+        "filter": "getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-owner": [
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(1)",
+        "public_fields": [
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(1) and (isTeamCenterCreated() or isSapMdgCrCreated())",
+        "public_fields": [],
+        "protected_fields": [
+          "^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(2)",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(3)",
+        "private_fields": [],
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ]
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(4)",
+        "public_fields": [],
+        "protected_fields": [
+          "^types$",
+          "^sap_change_control$|^sapChangeControl$"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(5)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      },
+      {
+        "filter": "isChangeOwnerTypeCreator() and getStatus().equals(6)",
+        "public_fields": [],
+        "protected_fields": [
+          ".*"
+        ],
+        "private_fields": []
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.comment.model.ReleasePackageComment": {
+    "user": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^commentText$|^comment_text$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "public_fields": [
+          ".*"
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^commentText$|^comment_text$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [
+          "^comment$"
+        ],
+        "private_fields": []
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "public_fields": [
+          ".*"
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "public_fields": [
+          ".*"
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.document.model.ReleasePackageCommentDocument": {
+    "user": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "Comment.creator": [
+      {
+        "filter": null,
+        "public_fields": [
+          ".*"
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackageCommentDocument.creator": [
+      {
+        "filter": null,
+        "public_fields": [
+          ".*"
+        ],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.document.model.ReleasePackageDocument": {
+    "user": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-control-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.myTeam-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.creator": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ReleasePackage.change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ]
+  },
+  "com.example.mirai.projectname.releasepackageservice.myteam.model.ReleasePackageMyTeam":{
+    "user": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "change-specialist-3": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.change-control-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.change-board-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.myTeam-member": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.creator": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.change-specialist-1": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ],
+    "ChangeRequest.change-specialist-2": [
+      {
+        "filter": null,
+        "public_fields": [],
+        "protected_fields": [],
+        "private_fields": []
+      }
+    ]
+  }
+}

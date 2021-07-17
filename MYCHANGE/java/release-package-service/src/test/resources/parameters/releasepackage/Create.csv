@@ -1,0 +1,7 @@
+user-to-create-release-package,expected-status-of-release-package
+cug-projectname-change-specialist-3,UNAUTHORIZED
+cug-projectname-change-specialist-1,UNAUTHORIZED
+cug-projectname-authorized-user,UNAUTHORIZED
+ReleasePackage.change-board-member,UNAUTHORIZED
+ReleasePackage.change-control-board-member,UNAUTHORIZED
+ReleasePackage.myTeam-member,UNAUTHORIZED
