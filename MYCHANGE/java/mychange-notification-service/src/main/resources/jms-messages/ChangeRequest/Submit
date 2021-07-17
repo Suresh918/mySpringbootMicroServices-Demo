@@ -1,0 +1,268 @@
+{
+    "type": "SUBMIT",
+    "status": "SUCCESS",
+    "entity": "com.example.mirai.projectname.changerequestservice.changerequest.model.ChangeRequest",
+    "payload": "com.example.mirai.projectname.changerequestservice.changerequest.model.aggregate.ChangeRequestAggregate",
+    "actor": {
+        "user_id": "ptummala",
+        "full_name": "Parameswari Tummala",
+        "email": "parameswari.tummala@example.qas",
+        "department_name": "IT BAS CC Corporate BPI & Automation",
+        "abbreviation": "PTUM"
+    },
+    "data": {
+        "description": {
+            "id": 10062,
+            "contexts": [{
+                    "type": "CHANGENOTICE",
+                    "context_id": "409021",
+                    "name": "Somr CNS",
+                    "status": "1"
+                }, {
+                    "type": "ACTION",
+                    "context_id": "123",
+                    "name": "Somr Action",
+                    "status": "1"
+                }, {
+                    "type": "ACTION",
+                    "context_id": "1223",
+                    "name": "Somr Action",
+                    "status": "1"
+                }
+            ],
+            "title": "New CR",
+            "status": 2,
+            "is_secure": false,
+            "change_specialist1": {
+                "user_id": "ptummala",
+                "full_name": "Parameswari Tummala",
+                "email": "parameswari.tummala@example.qas",
+                "department_name": "IT BAS CC Corporate BPI & Automation",
+                "abbreviation": "PTUM"
+            },
+            "change_specialist2": {
+                "user_id": "ptummala",
+                "full_name": "Parameswari Tummala",
+                "email": "parameswari.tummala@example.qas",
+                "department_name": "IT BAS CC Corporate BPI & Automation",
+                "abbreviation": "PTUM"
+            },
+            "creator": {
+                "user_id": "ptummala",
+                "full_name": "Parameswari Tummala",
+                "email": "parameswari.tummala@example.qas",
+                "department_name": "IT BAS CC Corporate BPI & Automation",
+                "abbreviation": "PTUM"
+            },
+            "created_on": "2020-10-07T13:28:38.431+00:00",
+            "change_control_boards": ["cug-cb-mc-01"],
+            "change_boards": ["cug-cb-mc-01"],
+            "issue_types": ["HW"],
+            "change_request_type": "CR",
+            "analysis_priority": 1,
+            "project_id": "2033-0009",
+            "product_id": "0108018656",
+            "functional_cluster_id": null,
+            "reasons_for_change": ["COST-OF-GOODS-REDUCTION", "END-OF-LIFE"],
+            "problem_description": "description",
+            "proposed_solution": "solution",
+            "root_cause": "cause",
+            "benefits_of_change": "text here",
+            "implementation_priority": 2,
+            "requirements_for_implementation_plan": "plan details",
+            "excess_and_obsolescence_savings": 42.0,
+            "dependent_change_request_ids": ["201223", "201343"],
+            "change_board_rule_set": {
+                "name": "rule set1",
+                "rules": ["rule1", "rule2"]
+            }
+        },
+        "scope": {
+            "id": 62,
+            "scope_details": "Tetst",
+            "parts": "IN-SCOPE",
+            "part_detail": {
+                "machine_bom_part": "IN-SCOPE",
+                "service_part": "IN-SCOPE",
+                "preinstall_part": "IN-SCOPE",
+                "test_rig_part": "IN-SCOPE",
+                "dev_bag_part": "IN-SCOPE",
+                "fco_upgrade_option_csr": "IN-SCOPE"
+            },
+            "tooling": "IN-SCOPE",
+            "tooling_detail": {
+                "supplier_tooling": "IN-SCOPE",
+                "manufacturing_de_tooling": "IN-SCOPE",
+                "service_tooling": "IN-SCOPE"
+            },
+            "packaging": "IN-SCOPE",
+            "packaging_detail": {
+                "supplier_packaging": "IN-SCOPE",
+                "storage_packaging": "IN-SCOPE",
+                "shipping_packaging": "IN-SCOPE",
+                "reusable_packaging": "IN-SCOPE"
+            }
+        },
+        "solution_definition": {
+            "id": 62,
+            "functional_software_dependencies": "YES",
+            "functional_software_dependencies_details": "details",
+            "functional_hardware_dependencies": "NO",
+            "functional_hardware_dependencies_details": "details",
+            "hardware_software_dependencies_aligned": "NO",
+            "hardware_software_dependencies_aligned_details": "details",
+            "test_and_release_strategy": "QUALIFY-RELEASE",
+            "test_and_release_strategy_details": "details",
+            "products_affected": ["AT:All test", "AT:AT:12x0"],
+            "products_module_affected": "testing",
+            "aligned_with_fo": "NO",
+            "aligned_with_fodetails": "details",
+            "technical_recommendation": "value"
+        },
+        "impact_analysis": {
+            "general": {
+                "id": 62,
+                "upgrade_packages": "NA",
+                "upgrade_time": "PT0S",
+                "recovery_time": "PT0S",
+                "pre_post_conditions": "NA",
+                "impact_on_sequence": "YES",
+                "impact_on_sequence_details": "testing",
+                "impact_on_availability": "INCREASE",
+                "impact_on_availability_details": "tetsing",
+                "multi_plant_impact": "NONE",
+                "phase_out_spares_tools": "OPTIMIZE-TIMING",
+                "phase_out_spares_tools_details": null,
+                "tech_risk_assessment_sra": "NO",
+                "tech_risk_assessment_sra_details": "<p>testing NA</p>",
+                "tech_risk_assessment_fmea": "NO",
+                "tech_risk_assessment_fmea_details": "<p>testing NA</p>",
+                "total_instances_affected": "0",
+                "impact_on_system_level_performance": "YES",
+                "impact_on_system_level_performance_details": "YES details",
+                "impact_on_cycle_time": "YES",
+                "impact_on_cycle_time_details": "details",
+                "impact_on_existing_parts": "YES",
+                "liability_risks": ["NO"],
+                "implementation_ranges": ["FCO"],
+                "implementation_ranges_details": "details",
+                "cbp_strategies": ["CHANGE-PMC-KEEP-TD", "CHANGE-PMC-NEW-TD"],
+                "cbp_strategies_details": "testing details",
+                "development_labor_hours": "PT1H",
+                "investigation_labor_hours": "PT1H",
+                "fco_types": ["COM-UPGRADE-DLT", "MODIFICATION-KIT"],
+                "calendar_dependency": "NON-LEADING",
+                "targeted_valid_configurations": "NXE:3600-D100"
+            },
+            "details": {
+                "customer_impact": {
+                    "id": 62,
+                    "customer_impact_result": "MINOR",
+                    "customer_approval": "NOT-REQUIRED",
+                    "customer_approval_details": "testing",
+                    "customer_communication": "TO-BE-DETERMINED",
+                    "customer_communication_details": "testing",
+                    "uptime_improvement": "PT1H",
+                    "fco_implementation": "PT1H",
+                    "uptime_payback": "PT1H",
+                    "uptime_improvement_availability": 2.0,
+                    "fco_implementation_availability": 2.0,
+                    "uptime_payback_availability": "PT1H",
+                    "impact_on_user_interfaces": "YES",
+                    "impact_on_user_interfaces_details": "details",
+                    "impact_on_wafer_process_environment": "YES",
+                    "impact_on_wafer_process_environment_details": "details",
+                    "change_to_customer_impact_critical_part": "YES",
+                    "change_to_customer_impact_critical_part_details": "details",
+                    "change_to_process_impacting_customer": "YES",
+                    "change_to_process_impacting_customer_details": "details",
+                    "fco_upgrade_option_csr_implementation_change": "YES",
+                    "fco_upgrade_option_csr_implementation_change_details": "details"
+                },
+                "preinstall_impact": {
+                    "id": 62,
+                    "preinstall_impact_result": "NA",
+                    "change_introduces_new11_nc": "YES",
+                    "change_introduces_new11_ncdetails": "details",
+                    "impact_on_customer_factory_layout": "YES",
+                    "impact_on_customer_factory_layout_details": "details",
+                    "impact_on_facility_flows": "YES",
+                    "impact_on_facility_flows_details": "details",
+                    "impact_on_preinstall_inter_connect_cables": "YES",
+                    "impact_on_preinstall_inter_connect_cables_details": "details",
+                    "change_replaces_mentioned_parts": "YES",
+                    "change_replaces_mentioned_parts_details": "details"
+                },
+                "complete_business_case": {
+                    "id": 62,
+                    "risk": 11.0,
+                    "risk_in_labor_hours": null,
+                    "hardware_commitment": "hardware commitment",
+                    "system_starts_impacted": 5,
+                    "systems_in_wip_and_field_impacted": 5,
+                    "factory_investments": 11.0,
+                    "fs_tooling_investments": 11.0,
+                    "supply_chain_management_investments": 11.0,
+                    "supplier_investments": 1.0,
+                    "de_investments": 1.0,
+                    "material_recurring_costs": 5.0,
+                    "labor_recurring_costs": 5.0,
+                    "cycle_time_recurring_costs": 5.0,
+                    "inventory_replace_nonrecurring_costs": 5.0,
+                    "inventory_scrap_nonrecurring_costs": 5.0,
+                    "supply_chain_adjustments_nonrecurring_costs": 5.0,
+                    "factory_change_order_nonrecurring_costs": 5.0,
+                    "field_change_order_nonrecurring_costs": 5.0,
+                    "update_upgrade_product_documentation_nonrecurring_costs": 5.0,
+                    "farm_out_development_nonrecurring_costs": 5.0,
+                    "prototype_materials_nonrecurring_costs": 5.0,
+                    "revenues_benefits": 5.0,
+                    "opex_reduction_field_labor_benefits": 5.0,
+                    "opex_reduction_spare_parts_benefits": 5.0,
+                    "customer_uptime_improvement_benefits": 5.0,
+                    "other_opexsavings_benefits": 5.0,
+                    "internal_rate_of_return": 5.0,
+                    "example_savings": 5.0,
+                    "payback_period": 5.0,
+                    "customer_opex_savings": 5.0,
+                    "risk_on_excess_and_obsolescence": null,
+                    "risk_on_excess_and_obsolescence_reduction_proposal": null,
+                    "risk_on_excess_and_obsolescence_reduction_proposal_costs": null
+                }
+            }
+        },
+        "my_team_details": {
+            "my_team": {
+                "id": 56
+            },
+            "members": [{
+                    "member": {
+                        "id": 43,
+                        "user": {
+                            "user_id": "ptummala1",
+                            "full_name": "ptummala",
+                            "email": "p.tummala@example.com",
+                            "department_name": "CM-DEPT",
+                            "abbreviation": "ptummala"
+                        },
+                        "roles": ["submitterRequestor", "changeSpecialist2"]
+                    }
+                }, {
+                    "member": {
+                        "id": 42,
+                        "user": {
+                            "user_id": "ptummala",
+                            "full_name": "ptummala",
+                            "email": "p.tummala@example.com",
+                            "department_name": "CM-DEPT",
+                            "abbreviation": "ptummala"
+                        },
+                        "roles": ["submitterRequestor", "changeSpecialist2"]
+                    }
+                }
+            ]
+        }
+    },
+    "changed_attributes": null,
+    "timestamp": 1604741753902
+}

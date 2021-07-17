@@ -1,0 +1,1 @@
+Defect Assigned: RP [(${baseRole.getReleasePackageId()})] ([(${baseRole.getECN()})])

@@ -1,0 +1,1 @@
+You forward all your notifications to [(${baseRole.getDelegatorName()})]

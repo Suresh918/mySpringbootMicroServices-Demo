@@ -1,0 +1,15 @@
+{{- if .Values.serviceAccount.create -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "projectname-notification-service.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "projectname-notification-service.fullname" . }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "projectname-notification-service.serviceAccountName" . }}
+    namespace: {{ .Release.Namespace }}
+  {{- end -}}

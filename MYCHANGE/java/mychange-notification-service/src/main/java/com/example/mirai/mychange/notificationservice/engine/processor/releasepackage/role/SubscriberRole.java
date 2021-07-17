@@ -1,0 +1,12 @@
+package com.example.mirai.projectname.notificationservice.engine.processor.releasepackage.role;
+
+import com.example.mirai.libraries.core.model.Event;
+import com.example.mirai.libraries.core.model.User;
+import com.example.mirai.projectname.notificationservice.engine.processor.releasepackage.ReleasePackageRole;
+
+public class SubscriberRole extends ReleasePackageRole {
+    public SubscriberRole(Event event, String role, User user, String category, Long id, Long entityId) {
+        super(event, role, category, entityId, id);
+        this.recipient = user;
+    }
+}

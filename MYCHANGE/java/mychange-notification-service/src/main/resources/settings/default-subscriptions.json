@@ -1,0 +1,506 @@
+[
+  {
+    "role": "ReviewExecutor",
+    "event": "ReviewCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestSolutionDefined",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageMyTeamMemberAdded",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewTaskDeleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestClosed",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewExecutor",
+    "event": "ReviewTaskCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewEntryAssigned",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewTaskUpdated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestObsoleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ChangeSpecialist2",
+    "event": "ReleasePackageReviewCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewTaskDueDateSoon",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageReviewCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewValidationStarted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewEntryUnassigned",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageObsoleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestSubmitted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewEntryCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestImpactAnalyzed",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestRejected",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestMyTeamMemberAdded",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageSubmitted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewExecutor",
+    "event": "ReviewValidationStarted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestApproved",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewTaskDueDateExpired",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ChangeSpecialst1",
+    "event": "ChangeRequestSubmitted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageReleased",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewValidationStarted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "Executor",
+    "event": "ReleasePackageCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestMyTeamMemberRemoved",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageMyTeamMemberRemoved",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ChangeRequestRedrafted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageReadyForRelease",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ChangeSpecialist2",
+    "event": "ReleasePackageReviewCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewEntryCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ChangeSpecialist2",
+    "event": "ReleasePackageReviewValidationStarted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewEntryAssignee",
+    "event": "ReviewCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewTaskAssignee",
+    "event": "ReviewTaskCreated",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "MyTeamMember",
+    "event": "ReleasePackageClosed",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  },
+  {
+    "role": "ReviewExecutor",
+    "event": "ReviewCompleted",
+    "delegates": [],
+    "emailChannel": {
+      "enabled": true,
+      "frequency": null
+    },
+    "inAppChannel": {
+      "enabled": true
+    }
+  }
+]
