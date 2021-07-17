@@ -1,0 +1,8 @@
+{{- if .Values.configuration -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "projectname-gateway.fullname" . }}
+data:
+  {{- toYaml .Values.configuration | nindent 2 }}
+  {{- end }}

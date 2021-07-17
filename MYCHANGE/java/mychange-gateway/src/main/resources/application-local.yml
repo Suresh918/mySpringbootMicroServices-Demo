@@ -1,0 +1,192 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - http://localhost
+      routes:
+        - id: mc-change-notice-import-scope-items
+          uri: http://LB-host.example.COM:10507/change-notices
+          predicates:
+            - Path=/api/mc/v0.1/change-notices/{segment}/change-objects/**
+            - Method=POST
+          filters:
+            - StripPrefix=3
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: aurora-comments
+          uri: http://LB-host.example.COM:10524/comments
+          predicates:
+            - Path=/api/aurora/comments
+            - Method=POST
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: mc
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/mc/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: gds
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/gds/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: config
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/config/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: id-generator
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/id-generator/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: air
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/air/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: cerberus
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/cerberus/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: teamcenter
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/teamcenter/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: sap-mdg
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/sap-mdg/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: exchange
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/exchange/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: hana-legacy
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/hana/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: hana-cache
+          uri: https://projectname-dev-nam.example.com
+          predicates:
+            - Path=/api/hana-cache/v0.1/**
+          filters:
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: actuator-health
+          uri: http://localhost:81
+          predicates:
+            - Path=/actuator/health
+            - Method=GET
+        - id: projectname-notification-service
+          uri: http://projectname-notification-service:8080
+          predicates:
+            - Path=/api/notification-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: review-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/review-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: change-request-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/change-request-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: release-package-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/release-package-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: impacted-item-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/impacted-item-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: user-service
+          uri: http://user-service:8080
+          predicates:
+            - Path=/api/user-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: projectname-configuration-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/configuration-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: gds-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/gds-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: hana-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/hana-service/**
+          filters:
+            - StripPrefix=2
+            - SetResponseHeader=Content-Type, application/json
+            - TokenRelay
+        - id: projectname-ui
+          uri: http://localhost:4200
+          predicates:
+            - Path=/**
+  redis:
+    password: redis
+    host: 127.0.0.1
+    port: 6379
+management:
+  server:
+    port: 81

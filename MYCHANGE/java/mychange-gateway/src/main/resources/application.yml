@@ -1,0 +1,73 @@
+server:
+  port: 80
+  max-http-header-size: 64KB
+spring:
+  application:
+    name: "projectname-gateway"
+  cloud:
+    gateway:
+      x-forwarded:
+        enabled: false
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedMethods:
+              - HEAD
+              - OPTIONS
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+      default-filters:
+        - RemoveRequestHeader=Cookie
+        - SaveSession
+        - RemoveResponseHeader=Server, X-Powered-By
+  data:
+    redis:
+      repositories:
+        enabled: false
+  security:
+    oauth2:
+      client:
+        registration:
+          nam:
+            client-id: d235626a-8f46-46d8-bc1b-2cd59f95b6e8
+            client-secret: eroi8xPLHcUNDLM8i4DdCXkOAB4G-Yu93oC2NXNkYWH-6c2R2lPDaWZtPgsOsePKzTyso26FfsPyE98VNHPNnA
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - urn:example.com:nam:scope:oauth:accessgateway
+              - mirai_profile
+        provider:
+          nam:
+            issuer-uri: https://idp-acc.example.com/nidp/oauth/nam
+            authorization-uri: https://idp-acc.example.com/nidp/oauth/nam/authz?resourceServer=mirai
+            token-uri: https://idp-acc.example.com/nidp/oauth/nam/token?resourceServer=mirai
+      resourceserver:
+        jwt:
+          issuer-uri: https://idp-acc.example.com/nidp/oauth/nam
+          jwk-set-uri: https://idp-acc.example.com/nidp/oauth/nam/keys
+          jws-algorithm: RS512
+  session:
+    store-type: redis
+    timeout: 24h
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 50MB
+      max-request-size: 55MB
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 8081
+logging:
+  file:
+    name: /var/log/${spring.application.name}.log
