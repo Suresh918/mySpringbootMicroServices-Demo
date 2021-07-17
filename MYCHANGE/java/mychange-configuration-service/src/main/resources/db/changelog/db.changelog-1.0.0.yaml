@@ -1,0 +1,114 @@
+databaseChangeLog:
+- changeSet:
+    id: create-table-link
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: link_pkey
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: hint
+            type: VARCHAR(255)
+        - column:
+            name: label
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: url
+            type: VARCHAR(255)
+        tableName: link
+- changeSet:
+    id: create-table-tag
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tag_pkey
+            name: name
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: active
+            type: BOOLEAN
+        - column:
+            name: label
+            type: VARCHAR(255)
+        tableName: tag
+- changeSet:
+    id: create-table-rule_set
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: rule_set_pkey
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: help
+            type: VARCHAR(1024)
+        - column:
+            name: label
+            type: VARCHAR(255)
+        - column:
+            name: rules
+            type: JSONB
+        tableName: rule_set
+- changeSet:
+    id: create-table-product_category
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: product_category_pkey
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: label
+            type: VARCHAR(255)
+        - column:
+            name: products
+            type: JSONB
+        tableName: product_category
+- changeSet:
+    id: create-table-form
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: form_pkey
+            name: name
+            type: VARCHAR(255)
+        - column:
+            name: actions
+            type: JSONB
+        - column:
+            name: fields
+            type: JSONB
+        - column:
+            name: filter_fields
+            type: JSONB
+        tableName: form

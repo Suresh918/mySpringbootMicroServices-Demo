@@ -1,0 +1,51 @@
+[
+   {
+      "name":"Group Of Field",
+      "fields":[
+         {
+            "name":"analysisPriority",
+            "data_type":"Number",
+            "properties":{
+               "label":"Priority of Analysis",
+               "hint":"",
+               "placeholder":"Priority of Analysis",
+               "group":"Group Of Field",
+               "help":{
+                  "title":null,
+                  "thumbnail":null,
+                  "animation":null,
+                  "message":"<p> Select <ol><li> (critical)</li><li>(high)</li><li>(medium)</li><li>(low)</li></ol> For AIR issues, this should be clear from the priority set in AIR.</p>"
+               },
+               "validators":{
+                  "min_length":1024,
+                  "max_length":1024,
+                  "pattern":"^\\\\d+$"
+               }
+            },
+            "options":[
+               {
+                  "value":"1",
+                  "label":"1 - Critical",
+                  "sequence":1
+               },
+               {
+                  "value":"2",
+                  "label":"2 - High",
+                  "sequence":2
+               },
+               {
+                  "value":"3",
+                  "label":"3 - Medium",
+                  "sequence":3
+               },
+               {
+                  "value":"4",
+                  "label":"4 - Low",
+                  "sequence":4
+               }
+            ],
+            "mandatory_for_case_actions":null
+         }
+      ]
+   }
+]
