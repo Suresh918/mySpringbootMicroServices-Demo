@@ -1,0 +1,6 @@
+abbreviation,expected-result
+GDS1,found
+GDS9,not-found
+"",bad-request
+GDS,bad-request
+GDS10,bad-request

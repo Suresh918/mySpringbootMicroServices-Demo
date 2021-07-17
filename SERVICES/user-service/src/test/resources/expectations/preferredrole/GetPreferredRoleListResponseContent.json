@@ -1,0 +1,18 @@
+[
+   {
+      "user_id": "<USER_ID1>",
+      "preferred_roles": [
+         "role1",
+         "role2",
+         "role3"
+      ]
+   },
+   {
+      "user_id": "<USER_ID2>",
+      "preferred_roles": [
+         "role1",
+         "role2",
+         "role3"
+      ]
+   }
+]

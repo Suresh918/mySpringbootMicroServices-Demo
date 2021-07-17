@@ -1,0 +1,7 @@
+group-ids,expected-result
+cug-gds-01,found-single
+"cug-gds-01,cug-gds-02",found-multiple
+"cug-gds-01,cug-gds-10",found-single
+cug-gds-10,no-content
+"",bad-request
+"cug-gds-01,cug-gds-02,cug-gds-03,cug-gds-04,cug-gds-05,cug-gds-06,cug-gds-07,cug-gds-08,cug-gds-09,cug-gds-10,cug-gds-11,cug-gds-12,cug-gds-13,cug-gds-14,cug-gds-15,cug-gds-16,cug-gds-17,cug-gds-18,cug-gds-19,cug-gds-20,cug-gds-21,cug-gds-22,cug-gds-23,cug-gds-24,cug-gds-25,cug-gds-26,cug-gds-27,cug-gds-28,cug-gds-29,cug-gds-30,cug-gds-31,cug-gds-32,cug-gds-33,cug-gds-34,cug-gds-35,cug-gds-36,cug-gds-37,cug-gds-38,cug-gds-39,cug-gds-40,cug-gds-41",bad-request

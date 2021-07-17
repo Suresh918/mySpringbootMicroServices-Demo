@@ -1,0 +1,16 @@
+{
+  "user_id": "<user_id>",
+  "email": "<user_id>_email@example.net",
+  "employee_number": "<user_id>_employee_number",
+  "full_name": "<user_id>_full_name",
+  "abbreviation": "<user_id>_abbreviation",
+  "department_number": "<user_id>_department_number",
+  "department_name": "<user_id>_department_name",
+  "roles": [
+    "user"
+  ],
+  "memberships": [
+    "cug-unspecialized"
+  ],
+  "last_accessed_on": null
+}

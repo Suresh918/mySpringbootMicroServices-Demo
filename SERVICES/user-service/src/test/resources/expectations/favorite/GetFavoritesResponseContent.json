@@ -1,0 +1,10 @@
+{
+   "user_id": "<USER_ID>",
+   "cases": [
+      {
+         "id": "1",
+         "name": "name",
+         "type": "type"
+      }
+   ]
+}

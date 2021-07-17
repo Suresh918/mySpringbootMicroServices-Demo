@@ -1,0 +1,10 @@
+search-query,expected-result
+GDS 01,found-single
+S 01,found-single
+GDS1,found-single
+gds01,found-single
+GDS, found-multiple
+Non Existing User,no-content
+"",bad-request
+GD,bad-request
+Ridiculously Loooooooooooong Search Query,bad-request

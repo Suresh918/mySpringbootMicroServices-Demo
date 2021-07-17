@@ -1,0 +1,15 @@
+{{- if .Values.serviceAccount.create -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "spring-boot-admin.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "spring-boot-admin.fullname" . }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "spring-boot-admin.serviceAccountName" . }}
+    namespace: {{ .Release.Namespace }}
+  {{- end -}}

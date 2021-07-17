@@ -1,0 +1,73 @@
+databaseChangeLog:
+- changeSet:
+    id: create-table-state
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: state_pkey
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: state
+            type: JSONB
+        tableName: state
+- changeSet:
+    id: create-table-profile
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: profile_pkey
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: last_accessed_on
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: email
+            type: VARCHAR(255)
+        tableName: profile
+- changeSet:
+    id: create-table-favorite
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: favorite_pkey
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: cases
+            type: JSONB
+        tableName: favorite
+- changeSet:
+    id: create-table-preferred_role
+    author: mabdirim
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: preferred_role_pkey
+            name: user_id
+            type: VARCHAR(255)
+        - column:
+            name: preferred_roles
+            type: JSONB
+        tableName: preferred_role
+
