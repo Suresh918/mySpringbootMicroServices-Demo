@@ -1,6 +1,0 @@
-docker run -p 5433:5432 --name postgres-projectname-notification -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=projectname-notification -d postgres
-
-#after connecting to schema execute the following command:
-CREATE extension tablefunc;
-
-#master-password: password

@@ -1,1 +1,0 @@
-AUTOMATIC RP CLOSURE ERROR | ECN ID - [(${baseRole.getEcnId()})] | RP NUMBER [(${baseRole.getReleasePackageNumber()})]

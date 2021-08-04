@@ -1,1 +1,0 @@
-Removed from myTeam of RP [(${baseRole.getReleasePackageNumber()})]

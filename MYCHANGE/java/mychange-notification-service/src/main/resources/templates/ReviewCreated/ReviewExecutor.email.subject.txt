@@ -1,1 +1,0 @@
-Review Started RP [(${baseRole.getReleasePackageId()})] ([(${baseRole.getECN()})])

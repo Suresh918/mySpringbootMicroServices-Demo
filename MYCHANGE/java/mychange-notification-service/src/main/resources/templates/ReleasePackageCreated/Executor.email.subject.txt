@@ -1,1 +1,0 @@
-Created (RP [(${baseRole.getReleasePackageId()})] - [(${baseRole.getReleasePackageECN()})]) for CN - [(${baseRole.getChangeNoticeId()})]

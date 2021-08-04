@@ -1,1 +1,0 @@
-Added to myTeam of RP [(${baseRole.getReleasePackageNumber()})]

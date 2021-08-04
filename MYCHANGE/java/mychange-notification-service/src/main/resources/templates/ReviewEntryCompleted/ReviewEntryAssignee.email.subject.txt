@@ -1,1 +1,0 @@
-Defect Done RP [(${baseRole.getReleasePackageId()})] ([(${baseRole.getECN()})])

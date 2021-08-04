@@ -1,1 +1,0 @@
-Reviewer Updated RP [(${baseRole.getReleasePackageId()})] ([(${baseRole.getECN()})])

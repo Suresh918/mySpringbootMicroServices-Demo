@@ -1,1 +1,0 @@
-You have been added to myTeam in [(${baseRole.getCaseObjectNumbersCount()})] CRs as [(${baseRole.getMemberRole()})]

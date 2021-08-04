@@ -1,1 +1,0 @@
-New Status CR [(${baseRole.getEntityId()})]:  [(${baseRole.getStatus()})]
