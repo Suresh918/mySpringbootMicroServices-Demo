@@ -1,7 +1,0 @@
-group-id,expected-result
-cug-gds-01,found
-cug-gds,not-found
-non-existing-user,not-found
-"",bad-request
-gd,bad-request
-cug-very-very-very-very-very-long-group-id,bad-request

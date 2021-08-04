@@ -1,7 +1,0 @@
-user-id,expected-result
-gds01,found
-gds,not-found
-non-existing-user,not-found
-"",bad-request
-gd,bad-request
-ridiculously-long-uid,bad-request
