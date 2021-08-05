@@ -1,4 +1,0 @@
-# Import YAML Template
-include:
-  - project: 'mirai/common/gitlab/ci-cd-templates'
-    file: '/Java-POM.yml'
