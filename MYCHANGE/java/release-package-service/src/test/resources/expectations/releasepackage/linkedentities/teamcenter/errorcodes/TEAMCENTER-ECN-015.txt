@@ -1,1 +1,0 @@
-{"application_status_code":"TEAMCENTER-ECN-015","status":500,"error":"Internal Server Error","severity":3,"message":null,"path":"/release-packages/<RELEASE-PACKAGE-ID>/case-action/<CASE-ACTION>","timestamp":"<TIME-STAMP>"}

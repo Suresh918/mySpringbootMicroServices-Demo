@@ -1,3 +1,0 @@
-user-to-execute-create,commentdocument-status,commentdocument-caseaction,expected-result,input
-ReleasePackageComment.creator,PUBLISHED,CREATE_DOCUMENT,AUTHORIZED,tags
-ReleasePackageComment.creator,DRAFTED,CREATE_DOCUMENT,AUTHORIZED,tags

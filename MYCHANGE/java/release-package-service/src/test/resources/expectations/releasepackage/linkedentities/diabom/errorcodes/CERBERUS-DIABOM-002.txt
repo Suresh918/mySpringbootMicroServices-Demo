@@ -1,1 +1,0 @@
-{"application_status_code":"CERBERUS-DIABOM-002","status":403,"error":"Forbidden","severity":3,"message":null,"path":"/release-packages/<DATA_IDENTIFIER>_release_package_id/dia-boms","timestamp":"<TIME-STAMP>"}

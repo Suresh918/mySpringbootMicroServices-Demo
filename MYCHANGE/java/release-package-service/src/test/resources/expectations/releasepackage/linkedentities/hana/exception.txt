@@ -1,1 +1,0 @@
-{"application_status_code":"HANA-000","status":500,"error":"error","severity":3,"message":"Hana service is not working as expected","timestamp":null}

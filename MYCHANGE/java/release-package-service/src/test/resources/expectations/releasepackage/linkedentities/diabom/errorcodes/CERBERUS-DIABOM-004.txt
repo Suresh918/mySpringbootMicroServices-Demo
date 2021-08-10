@@ -1,1 +1,0 @@
-{"application_status_code":"CERBERUS-DIABOM-004","status":500,"error":"Internal Server Error","severity":3,"message":null,"path":"/release-packages/<DATA_IDENTIFIER>_release_package_id/dia-boms","timestamp":"<TIME-STAMP>"}
